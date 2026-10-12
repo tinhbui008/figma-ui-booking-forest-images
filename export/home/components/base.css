@@ -1,0 +1,38 @@
+/* Base: tokens, reset, buttons, display text — dùng chung cho mọi component */
+:root{
+  --green-900:#034F34; --green-800:#0A5A35; --green-700:#0B6B3A; --green-600:#13843F; --green-500:#2E9B4F; --green-100:#E3F2E6;
+  --orange-500:#FC7F00; --orange-600:#FE5200; --label-orange:#E8590C;
+  --cream:#FCF7EC; --ink:#152238; --muted:#5C6470; --line:#ECE6DA;
+  --shadow:0 8px 28px rgb(90 64 30 / .10), 0 1px 4px rgb(90 64 30 / .06);
+  --font-sans:'Be Vietnam Pro',system-ui,sans-serif; --font-display:'Baloo 2','Be Vietnam Pro',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--cream);line-height:1.45;letter-spacing:-.018em;overflow-x:clip;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
+.container{width:min(1184px,100% - 32px);margin-inline:auto;position:relative}
+.ic{width:1em;height:1em;stroke-width:5.5;fill:none;flex:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-weight:700;border-radius:999px;transition:transform .15s,filter .15s;white-space:nowrap;letter-spacing:.01em}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-green{color:#fff;background:linear-gradient(180deg,#22A048 0%,#0E7A3A 60%,#0A6A33 100%);box-shadow:inset 0 2px 1px rgb(255 255 255 / .35),inset 0 -2px 0 rgb(0 0 0 / .15),0 3px 6px rgb(10 90 50 / .3)}
+.btn-orange{color:#fff;background:linear-gradient(180deg,#FFA024 0%,#FF7A0A 50%,#FE5A00 100%);box-shadow:inset 0 2px 1px rgb(255 255 255 / .4),inset 0 -2px 0 rgb(160 40 0 / .25),0 4px 10px rgb(254 82 0 / .3)}
+.btn-white{color:var(--green-900);background:#fff;border:3px solid #0E6B3B;box-shadow:0 3px 8px rgb(0 0 0 / .18)}
+.btn .ic{font-size:1.1em;stroke-width:7}
+
+/* Display text effect */
+.fx{position:relative;display:inline-block;font-family:var(--font-display);font-weight:800;line-height:.92;isolation:isolate;text-transform:uppercase;white-space:nowrap}
+.fx::before,.fx::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none}
+.fx::after{z-index:-2;color:#fff;-webkit-text-stroke:.26em #fff;filter:drop-shadow(0 .04em .06em rgb(0 0 0 / .3))}
+.fx::before{z-index:-1;color:#1E1206;-webkit-text-stroke:.13em #1E1206;transform:translateY(.045em)}
+.fx>span{position:relative;color:transparent;background:var(--g);-webkit-background-clip:text;background-clip:text}
+.fx-orange{--g:linear-gradient(180deg,#FFF35A 10%,#FFC51C 50%,#FF8F00 90%)}
+.fx-green{--g:linear-gradient(180deg,#EAFF70 8%,#86EA3A 45%,#1FAE3A 92%)}
+
+/* Amenity list (ComboCard + CabinFeature) */
+.amenities{list-style:none;margin:15px 0 0;display:grid;gap:11px}
+.amenities li{display:flex;align-items:center;gap:22px;font-size:14px;color:#3A434E;height:20px}
+.amenities .ic{font-size:21px;color:var(--green-800);stroke-width:7}

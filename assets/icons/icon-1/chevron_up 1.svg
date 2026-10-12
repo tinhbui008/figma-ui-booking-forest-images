@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="64" height="64" fill="url(#pattern0_2017_897)"/>
+<defs>
+<pattern id="pattern0_2017_897" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_2017_897" transform="scale(0.015625)"/>
+</pattern>
+<image id="image0_2017_897" width="64" height="64" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABoUlEQVR4nO2YQU7DMBBFf4JoOA5LjkAroi5KOQI3oNwh9AS9AhQEBc7AkuPUQY1ZJLipRGTFscdC/LdJlDj2/J+x5TFACCGEEEIIIYQQQggh/4gk1sDHxeQ0xdE1AFTYrb4W758x4ohiQFbkF4B+AJA1jxSQXKrF5lU6llR6wGyZjwF9j7141Pd6PbrLp9LxiGZAtszHqPQjgJOOJqVOkqvyZvMsFZOYAU3arwGMLE1LIJlJTQeRKdBKe5t41G3kpkPwDLD8+bK5drwLnwlBM8Dy50toPQeqKYDtL+9FMiFYBlgWvBJaz9Xt2wsAZMXkHEifutqGXBiDGNBHvPkmkgneDXARb76NYIJXA4aIN30Im+DNAB/iTV+CJngxwKd406eQCYMNCCHe9C1gwiADQoo3YwQ2wdkACfFmrIAmOBlQH2akHzgsaU1AIbawli21qlCduRyqOG2Fm5McMfEAUPeZzLCvH9pkP6dLffFZCwQvXiwmOOFkQIXdCocFjJKq4VsmqNbjbRNTb5wXwdiHmrHHJ4QQQgghhBBCCCGEkD/JN4SNE7wst8WYAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>

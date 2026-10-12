@@ -1,0 +1,51 @@
+/* ================= HERO ================= */
+.hero{position:relative;height:502px;background:#3b5a2a url(../photos/hero-glamping-tent.webp) no-repeat;background-size:110.4% auto;background-position:78% 61%;color:#fff}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:56px;background:radial-gradient(ellipse 72% 300% at 50% -200%,transparent 99.6%,var(--cream) 100%);pointer-events:none}
+.hero .container{height:100%}
+.hero .pill{position:absolute;left:25px;top:63px;display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 16px 0 12px;border-radius:999px;background:#fff;color:#1F2A24;font-weight:500;font-size:14.5px;box-shadow:0 3px 10px rgb(0 0 0 / .18)}
+.hero .pill .ic{color:var(--green-700);font-size:18px;stroke-width:6}
+.slider-ctrl{position:absolute;right:-14px;top:62px;height:37px;display:flex;align-items:center;gap:12px;background:#fff;color:#18261F;padding:0 14px;border-radius:999px;font-weight:600;font-size:14.5px;box-shadow:0 3px 10px rgb(0 0 0 / .18)}
+.slider-ctrl button{color:var(--green-700);font-size:19px;display:grid;place-items:center}
+.slider-ctrl .ic{stroke-width:7}
+.slider-ctrl .prev .ic{transform:scaleX(-1)}
+
+.sign{position:absolute;left:0;top:107px;width:457px;height:185px}
+.board{position:absolute;border-radius:9px;border:3px solid #4B2B12;background:
+  repeating-linear-gradient(0deg,transparent 0 7px,rgb(70 35 10 / .14) 7px 8px),
+  linear-gradient(180deg,#B98250 0%,#9A6233 100%);box-shadow:inset 0 2px 0 rgb(255 225 180 / .45),0 4px 0 #3C200B,0 8px 16px rgb(0 0 0 / .35)}
+.board::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#4B2B12;top:50%;left:10px;box-shadow:calc(var(--w,300px) - 26px) 0 0 #4B2B12}
+.sign .b1{left:44px;width:286px;top:8px;height:80px;transform:rotate(-2deg);--w:286px}
+.sign .b2{left:4px;width:452px;top:84px;height:92px;transform:rotate(.8deg);--w:452px}
+.sign .b3{left:58px;width:350px;top:166px;height:20px;transform:rotate(-.6deg);--w:350px}
+.sign h1{position:absolute;inset:0}
+.sign .l1{position:absolute;left:54px;top:20px;font-size:66px;letter-spacing:-.02em}
+.sign .l2{position:absolute;left:24px;top:96px;font-size:76px;letter-spacing:-.025em}
+.sign .deco{position:absolute;pointer-events:none;filter:drop-shadow(0 2px 2px rgb(0 0 0 / .25))}
+.sign .d1{width:40px;left:38px;top:0;transform:rotate(-15deg)}
+.sign .d2{width:44px;left:322px;top:50px;transform:rotate(20deg)}
+.sign .d3{width:54px;left:428px;top:142px;transform:rotate(55deg)}
+.hero .lead{position:absolute;left:39px;top:298px;width:372px;font-size:17px;letter-spacing:-.02em;line-height:24px;font-weight:600;text-shadow:0 1px 2px rgb(0 0 0 / .7),0 2px 10px rgb(0 0 0 / .45)}
+.hero .actions{position:absolute;left:25px;top:402px;display:flex;gap:12px;align-items:center}
+.hero .btn-orange{width:225px;height:60px;font-size:22px;font-weight:800;text-transform:uppercase}
+.hero .btn-white{width:207px;height:55px;font-size:17px;font-weight:700;text-transform:uppercase}
+
+@media (max-width:640px){
+  .hero{height:auto;background-size:cover;background-position:65% center}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(0 0 0 / .25),rgb(0 0 0 / .45))}
+  .hero .container{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0 80px}
+  .hero .pill,.sign,.hero .lead,.hero .actions{position:relative;left:auto;top:auto}
+  .slider-ctrl{display:none}
+  .sign{width:300px;height:128px;transform-origin:left top}
+  .sign .b1{left:28px;width:190px;height:56px}
+  .sign .b2{width:300px;top:56px;height:64px}
+  .sign .b3{display:none}
+  .sign .l1{font-size:48px;left:36px;top:10px}
+  .sign .l2{font-size:54px;left:14px;top:62px}
+  .sign .d1{width:28px}
+  .sign .d2{width:30px;left:212px;top:32px}
+  .sign .d3{width:36px;left:282px;top:96px}
+  .hero .lead{width:auto;font-size:15.5px}
+  .hero .actions{flex-wrap:wrap}
+  .hero .btn-orange{width:auto;padding:0 26px;height:52px;font-size:18px}
+  .hero .btn-white{width:auto;padding:0 22px;height:50px;font-size:15px}
+}
