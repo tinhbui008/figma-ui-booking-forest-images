@@ -1,0 +1,8 @@
+/* InfoBar — thanh thông tin xanh phía trên footer */
+.info-bar{position:relative;z-index:2;display:flex;align-items:center;gap:14px;width:min(1240px,100% - 32px);margin:56px auto -40px;min-height:65px;padding:0 26px 0 24px;border-radius:22px;background:#014833;color:#F2F7EF;box-shadow:0 6px 18px rgb(1 50 30 / .25)}
+.info-bar .ib{flex:none;width:30px;height:30px;border-radius:50%;background:#2E9A44;display:grid;place-items:center;font-size:18px;color:#fff}
+.info-bar .ib .ic{stroke-width:6.5}
+.info-bar p{flex:1;font-size:14px;letter-spacing:-.03em}
+.info-bar a{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;white-space:nowrap}
+.info-bar a:hover{text-decoration:underline}
+@media (max-width:900px){.info-bar{flex-wrap:wrap;padding:14px 18px;gap:10px 14px}.info-bar p{flex-basis:calc(100% - 44px)}}

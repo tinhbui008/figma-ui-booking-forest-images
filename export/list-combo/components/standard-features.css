@@ -1,0 +1,21 @@
+/* StandardFeatures — "Combo Rừng Xanh Tiêu Chuẩn": tiêu đề biển gỗ + 4 thẻ tính năng */
+.lc-std{position:relative;padding-top:26px}
+.lc-std .head{position:relative;height:208px}
+.lc-std .sign{position:absolute;left:12px;top:10px;width:378px;height:62px;transform:rotate(-3deg);background:url(../assets/decor/plank-leaf.webp) center/100% 100% no-repeat;display:flex;align-items:center;padding:6px 0 0 34px;font-weight:800;font-size:16px;color:#5A2C0C;text-transform:uppercase}
+.lc-std h2{position:absolute;left:52px;top:64px;font-size:54px;letter-spacing:-.03em}
+.lc-std h2 .fx{line-height:1}
+.lc-std .lead{position:absolute;left:42px;top:140px;width:720px;font-size:18px;line-height:30px;color:#4C5450;letter-spacing:-.02em}
+.lc-std .bush{position:absolute;left:-60px;top:60px;width:110px;pointer-events:none}
+.lc-std .cluster{position:absolute;right:-46px;top:22px;width:210px;pointer-events:none}
+.lc-feats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:min(1200px,100% - 32px);margin-inline:auto}
+.lc-feat{background:#fff;border-radius:22px;padding:16px 22px 26px 24px;box-shadow:0 8px 24px rgb(90 64 30 / .06)}
+.lc-feat img{width:88px;height:88px}
+.lc-feat h3{margin-top:20px;font-size:25px;font-weight:700;color:#164D33;letter-spacing:-.045em;line-height:1.2;white-space:nowrap}
+.lc-feat p{margin-top:12px;font-size:16px;line-height:28px;color:#6A7176;letter-spacing:-.02em}
+@media (max-width:1100px){.lc-feats{grid-template-columns:1fr 1fr}}
+@media (max-width:1024px){
+  .lc-std .head{height:auto;padding-bottom:24px;display:flex;flex-direction:column;gap:12px}
+  .lc-std .sign,.lc-std h2,.lc-std .lead{position:relative;left:auto;top:auto;width:auto}
+  .lc-std .bush,.lc-std .cluster{display:none}
+}
+@media (max-width:640px){.lc-feats{grid-template-columns:1fr}.lc-std h2{font-size:36px}.lc-std .sign{width:300px;height:52px;font-size:13px}.lc-std .lead{font-size:16px;line-height:27px}}

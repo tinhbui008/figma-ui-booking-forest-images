@@ -1,0 +1,20 @@
+/* SiteHeader — biến thể "pill nổi" trên nền trời (trang danh sách combo) */
+.site-header{position:absolute;inset:0 0 auto;z-index:20;height:110px;pointer-events:none}
+.site-header .tree-corner{position:absolute;left:-26px;top:-36px;width:150px;pointer-events:none}
+.hd-pill{pointer-events:auto;position:absolute;left:max(16px,calc(50% - 485px));right:max(16px,calc(50% - 622px));top:17px;height:76px;display:flex;align-items:center;padding:0 14px 0 18px;border-radius:40px;background:rgb(255 255 255 / .97);box-shadow:0 6px 20px rgb(20 70 110 / .14)}
+.hd-logo img{width:193px;height:auto}
+.hd-nav{display:flex;gap:38px;margin-left:auto;margin-right:30px;font-size:16.5px;font-weight:500;color:#3A3F44}
+.hd-nav a:hover{color:var(--green-700)}
+.hd-nav a[aria-current]{color:var(--green-700);font-weight:700}
+.hd-pill .btn-green{width:142px;height:56px;font-size:17px}
+.hd-avatar{margin-left:14px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green-900);color:#fff;font-size:22px}
+.hd-avatar .ic{stroke-width:6}
+.hd-menu{display:none}
+@media (max-width:1024px){
+  .hd-nav,.hd-pill .btn-green{display:none}
+  .hd-pill{left:16px;right:16px;height:64px}
+  .hd-logo img{width:150px}
+  .hd-menu{display:grid;place-items:center;margin-left:auto;width:44px;height:44px;border-radius:12px;background:var(--green-100);color:var(--green-700)}
+  .hd-menu span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+  .site-header .tree-corner{width:96px;left:-30px}
+}

@@ -21,6 +21,7 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
 .container{width:min(1184px,100% - 32px);margin-inline:auto;position:relative}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .ic{width:1em;height:1em;stroke-width:5.5;fill:none;flex:none}
 
 /* Buttons */
@@ -66,21 +67,25 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
 .slider-ctrl .ic{stroke-width:7}
 .slider-ctrl .prev .ic{transform:scaleX(-1)}
 
-.sign{position:absolute;left:0;top:107px;width:457px;height:185px}
-.board{position:absolute;border-radius:9px;border:3px solid #4B2B12;background:
-  repeating-linear-gradient(0deg,transparent 0 7px,rgb(70 35 10 / .14) 7px 8px),
-  linear-gradient(180deg,#B98250 0%,#9A6233 100%);box-shadow:inset 0 2px 0 rgb(255 225 180 / .45),0 4px 0 #3C200B,0 8px 16px rgb(0 0 0 / .35)}
-.board::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#4B2B12;top:50%;left:10px;box-shadow:calc(var(--w,300px) - 26px) 0 0 #4B2B12}
-.sign .b1{left:44px;width:286px;top:8px;height:80px;transform:rotate(-2deg);--w:286px}
-.sign .b2{left:4px;width:452px;top:84px;height:92px;transform:rotate(.8deg);--w:452px}
-.sign .b3{left:58px;width:350px;top:166px;height:20px;transform:rotate(-.6deg);--w:350px}
-.sign h1{position:absolute;inset:0}
-.sign .l1{position:absolute;left:54px;top:20px;font-size:66px;letter-spacing:-.02em}
-.sign .l2{position:absolute;left:24px;top:96px;font-size:76px;letter-spacing:-.025em}
-.sign .deco{position:absolute;pointer-events:none;filter:drop-shadow(0 2px 2px rgb(0 0 0 / .25))}
-.sign .d1{width:40px;left:38px;top:0;transform:rotate(-15deg)}
-.sign .d2{width:44px;left:322px;top:50px;transform:rotate(20deg)}
-.sign .d3{width:54px;left:428px;top:142px;transform:rotate(55deg)}
+/* Biển tiêu đề: ván gỗ là ảnh (decor/sign-planks.webp, không chữ), chữ là TEXT THẬT — sửa nội dung trực tiếp trong HTML.
+   --u: đơn vị co giãn (1px desktop, nhỏ hơn trên mobile) */
+.sign{--u:1px;position:absolute;left:-18px;top:103px;width:calc(518*var(--u));height:calc(193*var(--u));margin:0}
+.sign .planks{position:absolute;left:0;top:calc(6*var(--u));width:calc(513*var(--u));height:auto}
+.sign .ttl{position:absolute;inset:0;font-weight:800}
+/* Chữ 3 lớp: viền trắng ngoài cùng (::after) → viền đậm + bóng khối (::before) → mặt chữ gradient (span) */
+.title-3d{position:absolute;display:inline-block;isolation:isolate;white-space:nowrap;font-family:var(--font-display);font-weight:800;line-height:1;text-transform:uppercase}
+.title-3d::before,.title-3d::after{content:attr(data-text);position:absolute;left:0;top:0;pointer-events:none}
+.title-3d::after{z-index:-2;color:#FFF6DF;-webkit-text-stroke:.28em #FFF6DF;transform:translateY(.065em)}
+.title-3d::before{z-index:-1;color:var(--ol);-webkit-text-stroke:.21em var(--ol);text-shadow:0 .035em 0 var(--ol),0 .065em 0 var(--ol)}
+.title-3d>span{position:relative;color:transparent;background:var(--fill);-webkit-background-clip:text;background-clip:text}
+.title-3d.orange{--ol:#2A1103;--rim:#FFE9A6;--fill:linear-gradient(180deg,#FFF27A 0%,#FFD12A 38%,#FFA30F 70%,#F07800 100%)}
+.title-3d.green{--ol:#05230F;--rim:#D9FF9E;--fill:linear-gradient(180deg,#C9FF6A 0%,#7FEA3C 35%,#36C43A 70%,#14915A 100%)}
+.sign .l1{left:calc(96*var(--u));top:calc(14*var(--u));font-size:calc(76*var(--u));letter-spacing:.005em}
+.sign .l2{left:calc(44*var(--u));top:calc(90*var(--u));font-size:calc(86*var(--u));letter-spacing:-.005em}
+.sign .deco{position:absolute;pointer-events:none;filter:drop-shadow(0 2px 3px rgb(0 0 0 / .3))}
+.sign .d1{width:calc(46*var(--u));left:calc(52*var(--u));top:calc(-4*var(--u));transform:rotate(-25deg)}
+.sign .d2{width:calc(46*var(--u));left:calc(352*var(--u));top:calc(52*var(--u));transform:rotate(20deg)}
+.sign .d3{width:calc(52*var(--u));left:calc(486*var(--u));top:calc(160*var(--u));transform:rotate(35deg)}
 .hero .lead{position:absolute;left:39px;top:298px;width:372px;font-size:17px;letter-spacing:-.02em;line-height:24px;font-weight:600;text-shadow:0 1px 2px rgb(0 0 0 / .7),0 2px 10px rgb(0 0 0 / .45)}
 .hero .actions{position:absolute;left:25px;top:402px;display:flex;gap:12px;align-items:center}
 .hero .btn-orange{width:225px;height:60px;font-size:22px;font-weight:800;text-transform:uppercase}
@@ -243,13 +248,7 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
   .hero .container{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0 80px}
   .hero .pill,.sign,.hero .lead,.hero .actions{position:relative;left:auto;top:auto}
   .slider-ctrl{display:none}
-  .sign{width:300px;height:128px;transform-origin:left top}
-  .sign .b1{left:28px;width:190px;height:56px}
-  .sign .b2{width:300px;top:56px;height:64px}
-  .sign .b3{display:none}
-  .sign .l1{font-size:48px;left:36px;top:10px}
-  .sign .l2{font-size:54px;left:14px;top:62px}
-  .sign .d1{width:28px}.sign .d2{width:30px;left:212px;top:32px}.sign .d3{width:36px;left:282px;top:96px}
+  .sign{--u:.64px}
   .hero .lead{width:auto;font-size:15.5px}
   .hero .actions{flex-wrap:wrap}
   .hero .btn-orange{width:auto;padding:0 26px;height:52px;font-size:18px}
@@ -354,10 +353,10 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
     <div class="container">
       <span class="pill"><svg class="ic"><use href="#i-map-pin"/></svg>Khu nghỉ dưỡng gỗ · Thu / Đông 2026</span>
       <div class="sign">
-        <i class="board b1"></i><i class="board b2"></i><i class="board b3"></i>
-        <h1>
-          <span class="fx fx-orange l1" data-text="Ở giữa"><span>Ở giữa</span></span>
-          <span class="fx fx-green l2" data-text="Rừng xanh"><span>Rừng xanh</span></span>
+        <img class="planks" src="decor/sign-planks.webp" alt="" width="513" height="190">
+        <h1 class="ttl">
+          <span class="title-3d orange l1" data-text="Ở giữa"><span>Ở giữa</span></span>
+          <span class="title-3d green l2" data-text="Rừng xanh"><span>Rừng xanh</span></span>
         </h1>
         <img class="deco d1" src="decor/leaf-single.png" alt="">
         <img class="deco d2" src="decor/leaf-single.png" alt="">

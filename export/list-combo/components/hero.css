@@ -1,0 +1,36 @@
+/* ComboHero — tiêu đề trang danh sách combo: nền trời rừng + biển gỗ + huy hiệu 100% */
+/* Ảnh nền neo theo MÉP DƯỚI: đồi kem luôn nằm dưới khối chữ ở mọi độ rộng; màn rộng chỉ cắt bớt phần trời phía trên */
+.lc-hero{position:relative;height:430px;background:#3DB9FD url(../assets/backgrounds/hero-forest-sky.webp) center bottom/max(1280px,100%) auto no-repeat}
+.lc-hero .container{height:100%}
+.lc-sign{position:absolute;left:44px;top:139px;width:382px;height:67px;transform:rotate(-1.5deg);background:url(../assets/decor/plank-leaf.webp) center/100% 100% no-repeat;display:flex;align-items:center;padding:6px 0 0 32px;font-weight:800;font-size:16.5px;letter-spacing:-.01em;color:#5A2C0C;text-transform:uppercase}
+.lc-title{position:absolute;inset:0;pointer-events:none}
+.lc-title .l1{position:absolute;left:32px;top:208px;font-size:57px;letter-spacing:-.035em}
+.lc-title .l2{position:absolute;left:86px;top:266px;font-size:70px;letter-spacing:-.03em}
+.lc-hero .leaf{position:absolute;width:44px;pointer-events:none;filter:drop-shadow(0 2px 2px rgb(0 0 0 / .2))}
+.lc-hero .leaf.a{left:20px;top:290px;transform:rotate(-70deg)}
+.lc-hero .leaf.b{left:500px;top:280px;transform:rotate(70deg) scaleX(-1)}
+.lc-lead{position:absolute;left:10px;top:358px;width:650px;font-size:18px;line-height:31px;color:#3F4744;letter-spacing:-.02em}
+.lc-badge{position:absolute;right:-14px;top:282px;width:426px;height:122px;background:url(../assets/decor/board-leaf.webp) center/100% 100% no-repeat;display:flex;align-items:center;gap:14px;padding:14px 20px 0 28px;filter:drop-shadow(0 6px 10px rgb(80 50 20 / .22))}
+.lc-badge .pct{display:flex;align-items:center;gap:8px;font-size:36px;font-weight:800;color:var(--green-800);letter-spacing:-.03em;padding-right:14px;border-right:1.5px solid rgb(90 50 20 / .3)}
+.lc-badge .pct .ic{font-size:30px;color:#2E9B4F;stroke-width:6}
+.lc-badge b{display:block;font-size:15px;color:#2B2116}
+.lc-badge span{font-size:14px;color:#4D4035;letter-spacing:-.035em;white-space:nowrap}
+@media (max-width:1024px){
+  .lc-hero{height:auto;padding:120px 0 24px;background-size:1600px auto;background-position:30% top}
+  .lc-hero::before{content:"";position:absolute;inset:150px 0 0;background:linear-gradient(rgb(252 247 235 / 0),#FCF7EB 140px);pointer-events:none}
+  .lc-hero .container{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+  .lc-sign,.lc-lead,.lc-badge{position:relative;left:auto;right:auto;top:auto}
+  .lc-title{position:relative;height:150px;width:100%}
+  .lc-title .l1{left:0;top:0;font-size:50px}.lc-title .l2{left:30px;top:52px;font-size:58px}
+  .lc-hero .leaf{display:none}
+  .lc-lead{width:auto;font-size:16.5px;line-height:28px}
+  .lc-badge{width:min(426px,100%)}
+}
+@media (max-width:640px){
+  .lc-sign{width:300px;height:54px;font-size:13px;padding-left:24px}
+  .lc-title{height:110px}
+  .lc-title .l1{font-size:34px}.lc-title .l2{left:16px;top:38px;font-size:42px}
+  .lc-badge{height:auto;min-height:110px;padding:24px 18px 12px;gap:10px}
+  .lc-badge .pct{font-size:28px}
+  .lc-badge span{white-space:normal}
+}

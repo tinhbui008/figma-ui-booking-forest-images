@@ -1,0 +1,38 @@
+/* ComboCard (danh sách) — ảnh có lớp phủ thời lượng, đánh giá, khối "Gói bao gồm", giá + CTA */
+.lc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:min(1218px,100% - 32px);margin-inline:auto}
+.lc-card{min-width:0;display:flex;flex-direction:column;background:#fff;border-radius:22px;padding:10px 10px 22px;box-shadow:0 10px 30px rgb(90 64 30 / .08),0 1px 3px rgb(90 64 30 / .06)}
+.lc-card[hidden]{display:none}
+.lc-media{position:relative;height:320px;border-radius:18px;overflow:hidden}
+.lc-media img{width:100%;height:100%;object-fit:cover}
+.lc-media::after{content:"";position:absolute;inset:auto 0 0;height:52%;background:linear-gradient(180deg,transparent,rgb(6 30 20 / .82))}
+.lc-badges{position:absolute;left:10px;top:12px;display:flex;gap:8px;z-index:1;flex-wrap:wrap}
+.lc-badges span{height:30px;display:inline-flex;align-items:center;gap:7px;padding:0 12px 0 9px;border-radius:999px;background:#fff;font-size:14px;font-weight:600;color:#1E2A24;box-shadow:0 2px 8px rgb(0 0 0 / .18)}
+.lc-badges .dot{width:14px;height:14px;border-radius:50%;background:#2DAA4F;box-shadow:inset 0 0 0 3px #C8F0D2}
+.lc-badges .dot.warn{background:#FF5A12;box-shadow:inset 0 0 0 3px #FFD9C2}
+.lc-badges .hot{color:#E2470B}
+.lc-badges .ic{font-size:16px;color:#FF7A12}
+.lc-badges .crown .ic{color:#F5A30B}
+.lc-over{position:absolute;inset:auto 16px 16px;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;color:#fff;text-shadow:0 1px 3px rgb(0 0 0 / .35)}
+.lc-over small{display:block;font-size:15px;letter-spacing:-.01em;text-transform:uppercase;opacity:.95}
+.lc-over strong{display:block;font-size:24px;font-weight:700;margin-top:2px}
+.lc-over .for{text-align:right;font-size:15.5px}
+.lc-over .for b{display:block;font-size:16px}
+.lc-body{padding:20px 12px 0;display:flex;flex-direction:column;flex:1}
+.lc-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.lc-head h3{font-size:24.5px;font-weight:700;color:#164D33;letter-spacing:-.04em;line-height:1.2}
+.lc-rate{flex:none;display:flex;align-items:center;gap:6px;font-size:17px;font-weight:600;color:#2B3036}
+.lc-rate .ic{font-size:19px;color:#FF8A00}
+.lc-desc{margin-top:8px;font-size:15px;line-height:25px;color:#6A7176;letter-spacing:-.025em}
+.lc-incl{margin-top:18px;padding:16px 18px 18px;border-radius:16px;background:#FCF5EA}
+.lc-incl h4{font-size:16px;font-weight:700;color:#1A5A3A;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:12px}
+.lc-incl ul{list-style:none;display:grid;gap:11px}
+.lc-incl li{display:flex;align-items:center;gap:16px;font-size:15.5px;color:#40464C;letter-spacing:-.035em}
+.lc-incl .ic{font-size:21px;color:#FF7A12;stroke-width:6.5}
+.lc-foot{margin-top:auto;padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lc-price small{display:block;font-size:15px;color:#6A7176}
+.lc-price strong{display:block;font-size:26px;font-weight:800;color:#164D33;letter-spacing:-.02em;line-height:1.25}
+.lc-price strong span{font-size:16px;font-weight:600;margin-left:6px}
+.lc-price em{font-style:normal;font-size:14.5px;color:#6A7176}
+.lc-foot .btn-orange{width:170px;height:66px;font-size:18px;flex:none}
+@media (max-width:1100px){.lc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.lc-grid{grid-template-columns:1fr}.lc-media{height:260px}.lc-foot{flex-wrap:wrap}.lc-foot .btn-orange{width:100%;height:56px}.lc-head h3{font-size:22px}}
