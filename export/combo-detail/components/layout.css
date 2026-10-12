@@ -1,0 +1,8 @@
+/* Bố cục 2 cột: nội dung (trái) + thẻ giá dính (phải) */
+.cd-main{display:grid;grid-template-columns:690px 1fr;gap:23px;margin-top:22px;align-items:start}
+.cd-main>div{min-width:0}
+.cd-side{position:sticky;top:16px;margin-right:-24px}
+.cd-leaf{position:absolute;width:34px;pointer-events:none;filter:drop-shadow(0 2px 2px rgb(0 0 0 / .15))}
+@media (max-width:1100px){.cd-main{grid-template-columns:1fr}.cd-side{position:relative;top:0;margin-right:0}.cd-leaf{display:none}}
+
+main{overflow-x:clip}

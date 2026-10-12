@@ -1,0 +1,21 @@
+/* ComboSummary — eyebrow, tiêu đề, thông tin nhanh, mô tả, 4 ô thông số */
+.cd-sum .eyebrow{font-size:13px;font-weight:500;color:#4C5C54}
+.cd-sum .eyebrow b{color:#E8590C;font-weight:600;text-transform:uppercase}
+.cd-sum .eyebrow b::after{content:"▸";color:#7B847F;margin:0 6px}
+.cd-sum h1{display:flex;align-items:center;gap:12px;margin-top:6px;font-size:48px;font-weight:800;color:#0B5A3C;letter-spacing:-.035em;line-height:1.15}
+.cd-sum h1 img{width:34px;transform:rotate(15deg)}
+.cd-chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px}
+.cd-chips span{height:30px;display:inline-flex;align-items:center;gap:7px;padding:0 13px;border-radius:999px;font-size:13.5px;font-weight:500}
+.cd-chips .c1{background:#FDEBDB;color:#E8590C}
+.cd-chips .c2{background:#E3F2E6;color:#1F4A33}
+.cd-chips .c3{color:#3E4844;padding-left:4px}
+.cd-chips .ic{font-size:17px;stroke-width:6}
+.cd-chips .c2 .ic{color:#2DAA4F}.cd-chips .c3 .ic{color:#FFB01F}.cd-chips .c3 em{font-style:normal;color:#8A938E}
+.cd-sum .desc{margin-top:14px;font-size:12.5px;line-height:19.5px;color:#5E6863;letter-spacing:-.02em}
+.cd-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.cd-stats div{display:flex;align-items:center;gap:12px;height:72px;padding:0 12px;white-space:nowrap;border-radius:12px;background:#FFFDF6;box-shadow:0 2px 10px rgb(120 90 40 / .07)}
+.cd-stats .ic{font-size:30px;color:#FF8A12;stroke-width:5.5;flex:none}
+.cd-stats b{display:block;font-size:14.5px;font-weight:700;color:#1B2B24}
+.cd-stats small{font-size:12.5px;color:#6A7470}
+@media (max-width:900px){.cd-stats{grid-template-columns:1fr 1fr}.cd-stats div{white-space:normal}}
+@media (max-width:640px){.cd-sum h1{font-size:34px}}

@@ -1,0 +1,18 @@
+/* MapCard — bản đồ minh hoạ khu rừng + nhãn địa danh + thẻ "Trung tâm đón khách" (nhãn là HTML, sửa được) */
+.ct-map{position:relative;padding:9px;border-radius:22px;background:var(--card);box-shadow:var(--shadow);min-height:470px}
+.ct-map .map{position:relative;height:100%;min-height:452px;border-radius:16px;overflow:hidden;background:#BFE3A7 url(../assets/photos/forest-map@2x.webp) center/cover no-repeat}
+.ct-map .chip{position:absolute;left:12px;top:15px;height:36px;display:flex;align-items:center;padding:0 16px;border-radius:999px;background:#0E3B27;color:#fff;font:700 14px/1 var(--font-sans);letter-spacing:.06em}
+.ct-map .up{position:absolute;right:16px;top:18px;width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#0B4D2E;font-size:20px;box-shadow:0 2px 6px rgb(0 0 0 / .15)}
+.ct-map .up .ic{stroke-width:7}
+.ct-map .pin{position:absolute;display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700;color:#14254A;text-shadow:0 0 3px #fff,0 0 6px #fff;line-height:1.15}
+.ct-map .pin i{flex:none;width:34px;height:34px;border-radius:50% 50% 50% 0;rotate:-45deg;display:grid;place-items:center;background:#0B4D2E;box-shadow:0 0 0 3px #fff,0 3px 6px rgb(0 0 0 / .25)}
+.ct-map .pin i .ic{rotate:45deg;color:#fff;font-size:17px;stroke-width:6.5}
+.ct-map .pin.purple{color:#6B2BD9}.ct-map .pin.purple i{background:#7B3BEA}
+.ct-map .p1{right:68px;top:76px;flex-direction:row-reverse;text-align:right}
+.ct-map .p2{left:10px;top:222px;flex-direction:row-reverse}
+.ct-map .p3{right:14px;top:224px}
+.ct-map .hub{position:absolute;left:14px;bottom:20px;width:340px;padding:14px 18px;border-radius:14px;background:rgb(10 52 32 / .93);color:#fff}
+.ct-map .hub b{display:flex;align-items:center;gap:10px;font-size:15.5px;font-weight:800;text-transform:uppercase}
+.ct-map .hub b .ic{font-size:20px;color:#7FE07F;stroke-width:6}
+.ct-map .hub p{margin-top:8px;font-size:14.5px;line-height:22px;color:#E6F2EA}
+@media (max-width:640px){.ct-map .hub{right:14px;width:auto}.ct-map .p1{right:56px}}

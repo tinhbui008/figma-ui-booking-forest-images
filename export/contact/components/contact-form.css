@@ -1,0 +1,28 @@
+/* ContactForm — "Gửi lời nhắn đến đội ngũ hỗ trợ" (có kiểm tra bắt buộc phía client) */
+.ct-form{padding:0 24px 24px}
+.ct-form .intro{margin:14px 6px 0;font-size:15px;color:#4D5550}
+.ct-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin-top:20px}
+.ct-field label{display:flex;align-items:baseline;font-size:15px;font-weight:700;color:#14254A;margin-bottom:8px}
+.ct-field label i{font-style:normal;color:#E5341D;margin-left:3px}
+.ct-field label small{margin-left:auto;font-weight:400;font-size:14px;color:#6A7470}
+.ct-field .box{position:relative}
+.ct-field .box>.ic{position:absolute;left:18px;top:17px;font-size:19px;color:#A04E1F;stroke-width:6;pointer-events:none}
+.ct-field input,.ct-field select,.ct-field textarea{width:100%;height:52px;padding:0 16px 0 52px;border:1.5px solid transparent;border-radius:12px;background:#F8EEDD;font-size:15px;color:#14254A;outline:none;transition:border-color .15s,background .15s;appearance:none}
+.ct-field select{background-image:linear-gradient(45deg,transparent 50%,#7A6A55 50%),linear-gradient(135deg,#7A6A55 50%,transparent 50%);background-position:calc(100% - 22px) 23px,calc(100% - 16px) 23px;background-size:6px 6px;background-repeat:no-repeat}
+.ct-field textarea{height:108px;padding-top:15px;resize:vertical}
+.ct-field input::placeholder,.ct-field textarea::placeholder{color:#A49A8A}
+.ct-field :is(input,select,textarea):focus{border-color:#2E9B4F;background:#fff}
+.ct-field.full{grid-column:1/-1}
+.ct-field.err :is(input,select,textarea){border-color:#E5341D;background:#FFF5F3}
+.ct-field .msg{display:none;margin-top:6px;font-size:13px;color:#C62B15}
+.ct-field.err .msg{display:block}
+.ct-check{grid-column:1/-1;display:flex;align-items:flex-start;gap:14px;padding:16px 18px;border-radius:12px;background:#F8EEDD;font-size:14.5px;line-height:22px;color:#3B4440;cursor:pointer}
+.ct-check input{flex:none;width:20px;height:20px;margin-top:1px;accent-color:#0B6B3A}
+.ct-check .ic{flex:none;font-size:18px;color:#2E9B4F;margin-top:2px;stroke-width:6.5}
+.ct-submit{display:flex;align-items:center;gap:28px;margin-top:22px}
+.ct-submit .btn-orange{width:218px;height:60px;font-size:19px}
+.ct-submit p{display:flex;align-items:center;gap:10px;font-size:14px;color:#4D5550}
+.ct-submit p .ic{font-size:20px;color:#A04E1F;stroke-width:6}
+.ct-sent{display:none;margin-top:16px;padding:14px 18px;border-radius:12px;background:#E3F2E6;color:#1B6A35;font-weight:600}
+.ct-sent.show{display:block}
+@media (max-width:640px){.ct-fields{grid-template-columns:1fr}.ct-submit{flex-direction:column;align-items:flex-start;gap:12px}}

@@ -1,0 +1,27 @@
+/* ForestFooter — footer cảnh núi rừng + nền gỗ (theo footer trang question-answer).
+   Nền: ../backgrounds/footer-landscape@2x.webp (2560×1084, hiển thị 1280×542). */
+/* --ff-shift: mép đất của ảnh nằm ở 210/1280 chiều rộng ảnh; khi ảnh rộng hơn 1280px, đẩy nội dung xuống tương ứng */
+.ff{--ff-shift:max(0px,calc(16.406vw - 210px));position:relative;margin-top:24px;height:calc(446px + var(--ff-shift));color:#FFF3E2;background:#9A5426 url(../assets/backgrounds/footer-landscape@2x.webp) center top/max(1280px,100%) auto no-repeat}
+.ff .container{height:100%;top:var(--ff-shift)}
+.ff-brand{position:absolute;left:0;top:226px}
+.ff-brand img{width:170px;height:auto;filter:drop-shadow(0 2px 3px rgb(0 0 0 / .35))}
+.ff-brand p{margin-top:10px;width:290px;font-size:15px;line-height:24px;letter-spacing:-.02em}
+.ff-col{position:absolute;top:238px}
+.ff-col.c2{left:309px;width:280px}.ff-col.c3{left:614px;width:340px}.ff-col.c4{left:940px;width:262px}
+.ff h4{margin-bottom:10px;font-size:16px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;color:#FFE9C9}
+.ff ul{list-style:none;display:grid;gap:6px;font-size:14.5px;line-height:23px;letter-spacing:-.025em}
+.ff li{display:flex;gap:14px;align-items:flex-start}
+.ff li .ic{font-size:18px;margin-top:2px;stroke-width:6.5}
+.ff a:hover{text-decoration:underline}
+.ff-copy{position:absolute;left:0;right:0;top:390px;padding-top:16px;border-top:1px solid rgb(255 233 201 / .22);font-size:13.5px;letter-spacing:-.02em}
+
+@media (max-width:1024px){
+  .ff{--ff-shift:0px;height:auto;padding:calc(230px + max(0px,calc(16.406vw - 210px))) 0 24px}
+  .ff .container{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+  .ff-brand,.ff-col,.ff-copy{position:static;width:auto}
+  .ff-copy{grid-column:1/-1;padding-top:16px}
+}
+@media (max-width:640px){
+  .ff{padding-top:170px;background-size:900px auto}
+  .ff .container{grid-template-columns:1fr}
+}

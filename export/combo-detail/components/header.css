@@ -1,0 +1,27 @@
+/* SiteHeader — biến thể "2 pill" trên dải trời (trang chi tiết combo) + breadcrumb */
+.cd-top{position:relative;height:96px;background:url(../assets/backgrounds/header-sky-strip.webp) center top/100% 132px no-repeat}
+.cd-top::after{content:"";position:absolute;inset:auto 0 0;height:30px;background:linear-gradient(transparent,#FFFAEE)}
+.cd-top .cd-wrap{height:100%;display:flex;align-items:flex-start;gap:16px;z-index:1}
+.cd-logo{margin:9px 0 0 63px;height:72px;padding:0 22px;display:flex;align-items:center;border-radius:36px;background:rgb(255 253 246 / .92);box-shadow:0 4px 16px rgb(30 80 120 / .12)}
+.cd-logo img{width:178px;height:auto}
+.cd-nav{margin:11px 0 0 auto;height:74px;display:flex;align-items:center;gap:32px;padding:0 16px 0 24px;border-radius:37px;background:rgb(255 253 246 / .92);box-shadow:0 4px 16px rgb(30 80 120 / .12)}
+.cd-nav nav{display:flex;gap:30px;font-size:14.5px;font-weight:600;color:#1F4A33}
+.cd-nav nav a:hover,.cd-nav nav a[aria-current]{color:var(--green-700)}
+.cd-nav .btn-green{width:106px;height:42px;font-size:14.5px}
+.cd-nav .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--green-900);color:#fff;font-size:19px;margin-left:-18px}
+.cd-nav .menu{display:none}
+.cd-crumbs{display:flex;justify-content:space-between;align-items:center;height:28px;margin-top:-2px;font-size:13px;color:#1F4A33}
+.cd-crumbs a{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.cd-crumbs a:hover{text-decoration:underline}
+.cd-crumbs .ic{font-size:13px;stroke-width:7}
+.cd-crumbs ol{list-style:none;display:flex;gap:6px;align-items:center;color:#4C5C54}
+.cd-crumbs ol li+li::before{content:"›";margin-right:6px}
+@media (max-width:1024px){
+  .cd-logo{margin-left:0}.cd-logo img{width:140px}
+  .cd-nav nav,.cd-nav .btn-green{display:none}
+  .cd-nav{gap:10px;padding:0 10px}
+  .cd-nav .av{margin-left:0}
+  .cd-nav .menu{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--green-100);color:var(--green-700)}
+  .cd-nav .menu span{width:18px;height:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+}
+@media (max-width:640px){.cd-crumbs ol{display:none}.cd-logo,.cd-nav{height:58px}.cd-logo{padding:0 14px}}

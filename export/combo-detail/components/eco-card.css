@@ -1,0 +1,6 @@
+/* EcoCard — cam kết môi trường, nền xanh có rừng + cụm biển gỗ */
+.cd-eco{position:relative;margin-top:22px;min-height:254px;padding:24px 170px 24px 30px;border-radius:24px;color:#fff;background:#0F6B3E url(../assets/backgrounds/eco-card.webp) center/cover no-repeat;overflow:visible}
+.cd-eco h3{font-size:25px;font-weight:700;line-height:33px;letter-spacing:-.025em}
+.cd-eco p{margin-top:14px;font-size:13.5px;line-height:21px;color:#E3F2E6}
+.cd-eco img{position:absolute;right:-30px;bottom:-30px;width:190px;pointer-events:none}
+@media (max-width:640px){.cd-eco{padding-right:110px}.cd-eco img{width:150px;right:-10px}.cd-eco h3{font-size:21px;line-height:28px}}

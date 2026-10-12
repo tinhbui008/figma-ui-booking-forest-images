@@ -1,0 +1,7 @@
+/* Bố cục: 2 cột (trái 494 / phải 1fr) + hàng dưới (tiếp cận 710 / bản đồ 1fr) */
+.ct-main{position:relative;margin-top:2px}
+.ct-grid{display:grid;grid-template-columns:494px 1fr;gap:26px;align-items:start}
+.ct-col{display:grid;gap:42px;min-width:0}
+.ct-col.right{gap:40px}
+.ct-row2{display:grid;grid-template-columns:710px 1fr;gap:10px;margin-top:46px;align-items:stretch}
+@media (max-width:1100px){.ct-grid,.ct-row2{grid-template-columns:1fr}.ct-col.right{order:-1}}

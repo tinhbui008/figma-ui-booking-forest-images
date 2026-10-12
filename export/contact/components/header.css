@@ -1,0 +1,18 @@
+/* SiteHeader — thanh pill trắng rộng chứa logo + menu (trang Liên hệ: mục "Liên Hệ" đang chọn) */
+.ct-header{position:absolute;inset:0 0 auto;z-index:20;padding-top:10px}
+.ct-header .bar{width:min(1156px,100% - 32px);margin-inline:auto;height:74px;display:flex;align-items:center;padding:0 16px 0 22px;border-radius:40px;background:rgb(255 251 243 / .97);box-shadow:0 6px 20px rgb(20 70 110 / .14)}
+.ct-header .logo img{width:178px;height:auto}
+.ct-header nav{display:flex;gap:34px;margin-left:auto;margin-right:auto;padding-left:150px;font-size:16px;font-weight:500;color:#3A4A42}
+.ct-header nav a:hover{color:var(--green-700)}
+.ct-header nav a[aria-current]{color:var(--green-700);font-weight:800}
+.ct-header .btn-green{width:130px;height:50px;font-size:16.5px}
+.ct-header .avatar{margin-left:22px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green-900);color:#fff;font-size:22px;box-shadow:0 0 0 3px #fff}
+.ct-header .menu{display:none}
+@media (max-width:1024px){
+  .ct-header nav,.ct-header .btn-green{display:none}
+  .ct-header .bar{height:62px}
+  .ct-header .logo img{width:140px}
+  .ct-header .menu{display:grid;place-items:center;margin-left:auto;width:44px;height:44px;border-radius:12px;background:var(--green-100);color:var(--green-700)}
+  .ct-header .menu span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+  .ct-header .avatar{margin-left:10px}
+}

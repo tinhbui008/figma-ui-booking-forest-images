@@ -1,0 +1,37 @@
+/* PriceCard — khung gỗ "Giá trọn gói", thông tin chuyến, bảng giá, CTA, cam kết, tư vấn viên. Dính khi cuộn (desktop) */
+.cd-price{position:sticky;top:16px;padding-top:20px}
+.cd-price .sign{position:absolute;left:-14px;right:-14px;top:0;height:64px;z-index:2;background:url(../assets/decor/plank-dark.webp) center/100% 100% no-repeat;display:grid;place-items:center;padding-top:4px;font-size:16px;font-weight:800;color:#FFF3E2;letter-spacing:.02em;text-transform:uppercase;text-shadow:0 1px 2px rgb(60 25 5 / .6)}
+.cd-price .box{position:relative;padding:58px 18px 18px;border-radius:14px;background:#fff;border:6px solid #B2652F;box-shadow:inset 0 0 0 2px #E2A774,0 10px 24px rgb(110 60 20 / .18)}
+.cd-price .amt{display:flex;align-items:center;gap:8px}
+.cd-price .amt strong{font-size:44px;font-weight:800;color:#0B5A3C;letter-spacing:-.04em;line-height:1}
+.cd-price .amt small{font-size:15px;font-weight:700;color:#0B5A3C;align-self:flex-end;padding-bottom:4px}
+.cd-price .amt em{margin-left:auto;height:34px;display:grid;place-items:center;padding:0 14px;border-radius:999px;background:#FFF0E3;color:#E8590C;font-style:normal;font-size:13px;font-weight:600}
+.cd-price .note{margin-top:10px;font-size:12px;line-height:18px;color:#7A827E}
+.cd-rows{display:grid;gap:7px;margin-top:14px}
+.cd-rows div{display:flex;align-items:center;gap:12px;min-height:50px;padding:6px 12px;border-radius:10px;background:#FAF4EA}
+.cd-rows>div>.ic{font-size:22px;color:#FF8A12;stroke-width:6;flex:none}
+.cd-rows span{flex:1;font-size:13px;color:#1B2B24}
+.cd-rows span small{display:block;font-size:12.5px;color:#7A827E}
+.cd-rows a{font-size:12.5px;font-weight:600;color:#E8590C;white-space:nowrap}
+.cd-rows a.g{color:#0B6B3A}
+.cd-bill{margin-top:12px;font-size:13px;color:#3E4844}
+.cd-bill div{display:flex;justify-content:space-between;padding:6px 6px;border-bottom:1px dashed #EEE7DA}
+.cd-bill div b{font-weight:600;color:#1B2B24}
+.cd-bill .minus b{color:#1E9A2A}
+.cd-total{margin-top:12px;padding:14px 14px 10px;border-radius:10px;background:#EBF4EE}
+.cd-total div{display:flex;justify-content:space-between;align-items:center;font-weight:800;color:#0B5A3C}
+.cd-total div span{font-size:19px}.cd-total div strong{font-size:22px;letter-spacing:-.02em}
+.cd-total small{display:block;text-align:right;font-size:11px;color:#7A827E;margin-top:2px}
+.cd-price .btn-green{width:100%;height:52px;margin-top:12px;font-size:18px}
+.cd-trust{list-style:none;display:grid;gap:12px;margin:16px 4px 0}
+.cd-trust li{display:flex;align-items:center;gap:12px;font-size:12.5px;color:#5E6863}
+.cd-trust li b{color:#1B2B24;font-weight:600}
+.cd-trust .ic{width:24px;height:24px;padding:4px;border-radius:50%;flex:none;stroke-width:7;color:#fff}
+.cd-trust .k1 .ic{background:#2DAA4F}.cd-trust .k2 .ic,.cd-trust .k3 .ic,.cd-trust .k4 .ic{background:#FF8A12}
+.cd-adv{display:flex;align-items:center;gap:14px;margin-top:16px;padding:12px 14px;border-radius:12px;background:#FAF4EA}
+.cd-adv .avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#FFE1C7;color:#E8590C;font-weight:700;font-size:16px;flex:none}
+.cd-adv b{display:block;font-size:13.5px;color:#14254A}
+.cd-adv small{font-size:12px;color:#7A827E}
+.cd-adv a{margin-left:auto;height:32px;display:grid;place-items:center;padding:0 14px;border-radius:999px;border:1px solid #F2B98A;color:#E8590C;font-size:12.5px;font-weight:600;white-space:nowrap;background:#fff}
+@media (max-width:1100px){.cd-price{position:relative;top:0}}
+@media (max-width:640px){.cd-price .amt strong{font-size:34px}.cd-price .amt{flex-wrap:wrap}.cd-adv{flex-wrap:wrap}.cd-adv a{margin-left:58px}}

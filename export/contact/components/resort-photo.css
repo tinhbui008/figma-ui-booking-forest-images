@@ -1,0 +1,10 @@
+/* ResortPhoto — ảnh khu nghỉ + dải tiêu đề xanh đậm */
+.ct-photo{position:relative;height:289px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#0D3F25}
+.ct-photo img{width:100%;height:100%;object-fit:cover}
+.ct-photo::after{content:"";position:absolute;inset:auto 0 0;height:46%;background:linear-gradient(180deg,rgb(9 52 30 / 0) 0%,rgb(9 52 30 / .82) 55%,#0A3A22 100%)}
+.ct-photo .cap{position:absolute;inset:auto 18px 14px 22px;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;color:#fff}
+.ct-photo .cap small{display:inline-flex;height:26px;align-items:center;padding:0 12px;border-radius:999px;background:#fff;color:#1E2A24;font-size:13px;font-weight:600}
+.ct-photo .cap h2{margin-top:8px;font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.ct-photo .cap span{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px;border-radius:999px;background:rgb(255 255 255 / .1);border:1px solid rgb(255 255 255 / .18);font-size:13.5px;white-space:nowrap}
+.ct-photo .cap span .ic{font-size:18px;stroke-width:6}
+@media (max-width:640px){.card-head{flex-wrap:wrap;margin-left:-6px}.pill-ok{margin-top:0}.plank{font-size:20px;padding-left:62px;white-space:normal;height:auto;min-height:50px;padding-block:10px}.plank.sm{font-size:15px}.ct-info li{gap:14px;padding-inline:14px}.ct-info b,.ct-info a{overflow-wrap:anywhere}.ct-photo{height:240px}.ct-photo .cap{flex-direction:column;align-items:flex-start}.ct-photo .cap span{display:none}}

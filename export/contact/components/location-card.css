@@ -1,0 +1,13 @@
+/* LocationCard — "Tọa độ & Vị trí": lô đất, độ cao, GPS, lưu ý đường vào */
+.ct-loc{padding:0 22px 22px}
+.ct-loc .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.ct-loc .tile{display:flex;align-items:center;gap:14px;min-height:64px;padding:8px 16px;border-radius:14px;background:var(--row)}
+.ct-loc .tile .ic{font-size:28px;color:#1F8A3C;stroke-width:6}
+.ct-loc .tile small{display:block;font-size:14px;color:#5A625D}
+.ct-loc .tile b{font-size:14.5px;letter-spacing:-.03em;font-weight:700;color:#14254A}
+.ct-loc .gps{grid-column:1/-1;justify-content:space-between}
+.ct-loc .gps span{display:flex;align-items:center;gap:14px;font-size:15px;color:#3B4440}
+.ct-loc .gps .ic{color:#A6B21A}
+.ct-loc .gps code{height:32px;display:grid;place-items:center;padding:0 14px;border-radius:999px;background:#fff;font:700 15px/1 var(--font-sans);color:#C2410C;letter-spacing:.02em;box-shadow:0 1px 3px rgb(0 0 0 / .08)}
+.ct-loc .note{margin-top:14px;font-size:14px;line-height:22px;color:#4D5550}
+.ct-loc .note b{color:#14254A}

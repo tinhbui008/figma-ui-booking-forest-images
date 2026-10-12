@@ -1,0 +1,21 @@
+/* Itinerary — lịch trình theo ngày, mở/thu từng ngày (details/summary) */
+.cd-iti{margin-top:30px}
+.cd-iti .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.cd-iti .card{padding:6px 18px 10px;border-radius:14px;background:#FFFDF6;box-shadow:0 2px 10px rgb(120 90 40 / .07)}
+.cd-iti details+details{border-top:1px solid #F0E9DA;margin-top:6px}
+.cd-iti summary{list-style:none;display:flex;align-items:center;gap:22px;height:44px;cursor:pointer}
+.cd-iti summary::-webkit-details-marker{display:none}
+.cd-iti summary .day{height:28px;display:grid;place-items:center;padding:0 12px;border-radius:7px;background:#0B6B3A;color:#fff;font-size:14.5px;font-weight:700}
+.cd-iti summary b{flex:1;font-size:15px;font-weight:700;color:#14254A;letter-spacing:-.02em}
+.cd-iti summary em{display:flex;align-items:center;gap:6px;font-style:normal;font-size:13.5px;font-weight:600;color:#0B6B3A}
+.cd-iti summary em .ic{font-size:14px;stroke-width:7;transition:transform .2s}
+.cd-iti details[open] summary em .ic{transform:rotate(180deg)}
+.cd-iti ol{list-style:none;padding:4px 0 8px}
+.cd-iti li{position:relative;display:grid;grid-template-columns:62px 1fr;gap:44px;padding-bottom:5px}
+.cd-iti li time{font-size:14px;font-weight:700;color:#F06A00;padding-top:1px}
+.cd-iti li::before{content:"";position:absolute;left:80px;top:6px;width:9px;height:9px;border-radius:50%;background:#FFA21F;box-shadow:0 0 0 2px #FFE4BA}
+.cd-iti li::after{content:"";position:absolute;left:84px;top:17px;bottom:-4px;width:1.5px;background:#FFCB7A}
+.cd-iti li:last-child::after{display:none}
+.cd-iti li strong{display:block;font-size:13.5px;font-weight:700;color:#14254A;letter-spacing:-.02em}
+.cd-iti li span{display:block;font-size:12.5px;line-height:18px;color:#5E6863}
+@media (max-width:640px){.cd-iti summary{gap:10px}.cd-iti summary b{font-size:14px}.cd-iti summary em{display:none}.cd-iti li{grid-template-columns:44px 1fr;gap:30px}.cd-iti li::before{left:56px}.cd-iti li::after{left:60px}}
