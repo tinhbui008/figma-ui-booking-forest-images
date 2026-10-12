@@ -1,27 +1,40 @@
 /* ================= FOOTER ================= */
-.footer{position:relative;margin-top:20px;height:236px;color:#FFF4E4;background:#9A5426 url(../backgrounds/footer-wood.webp) no-repeat;background-size:max(1280px,100%) auto;background-position:center -70px}
+.footer-band{position:relative;height:144px;background:url(../backgrounds/footer-top-band.webp) center bottom/max(1280px,100%) auto no-repeat}
+.footer-band .container{height:100%}
+.info-bar{position:absolute;left:-25px;right:-30px;top:60px;height:65px;display:flex;align-items:center;gap:14px;padding:0 26px 0 24px;border-radius:22px;background:#014833;color:#F2F7EF;box-shadow:0 6px 18px rgb(1 50 30 / .25)}
+.info-bar .ib{flex:none;width:30px;height:30px;border-radius:50%;background:#2E9A44;display:grid;place-items:center;font-size:18px;color:#fff}
+.info-bar .ib .ic{stroke-width:6.5}
+.info-bar p{flex:1;font-size:14px;letter-spacing:-.03em}
+.info-bar a{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;white-space:nowrap}
+.info-bar a:hover{text-decoration:underline}
+
+.footer{position:relative;margin-top:0;height:310px;color:#FFF3E2;background:#9A5426 url(../backgrounds/footer-wood.webp) no-repeat;background-size:max(1280px,100%) auto;background-position:center top}
 .footer .container{height:100%}
-.footer .brand{position:absolute;left:12px;top:22px}
-.footer .brand img{width:180px}
-.footer .brand p{margin-top:10px;width:290px;font-size:14px;line-height:21px;letter-spacing:-.025em}
-.fcol{position:absolute;top:44px}
-.fcol.c2{left:328px}.fcol.c3{left:582px}.fcol.c4{left:873px}
-.footer h4{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#FFEBD0;margin-bottom:10px}
-.footer ul{list-style:none;display:grid;gap:4px;font-size:13.5px;line-height:21px;letter-spacing:-.025em}
+.footer .brand{position:absolute;left:-1px;top:80px}
+.footer .brand img{width:205px;height:auto}
+.footer .brand p{margin-top:8px;width:320px;font-size:15px;line-height:25px;letter-spacing:-.025em}
+.fcol{position:absolute;top:93px}
+.fcol.c2{left:350px}.fcol.c3{left:628px;width:300px}.fcol.c4{left:935px;width:290px}
+.footer h4{font-size:14px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;color:#FFE9C9;margin-bottom:12px}
+.footer ul{list-style:none;display:grid;gap:6px;font-size:13.5px;line-height:24px;letter-spacing:-.03em}
 .footer li{display:flex;gap:12px;align-items:flex-start}
-.footer li .ic{font-size:17px;margin-top:2px;stroke-width:6}
+.footer li .ic{font-size:17px;margin-top:3px;stroke-width:6.5;color:#FFF3E2}
 .footer a:hover{text-decoration:underline}
-.copy{position:absolute;left:12px;top:174px;font-size:13px}
-.footer-links{position:absolute;right:-18px;top:166px;display:flex;gap:4px;background:#FFF8EC;border-radius:999px;padding:4px 5px;box-shadow:0 3px 10px rgb(0 0 0 / .25)}
-.footer-links a{color:#1C2B22;font-size:11.5px;font-weight:500;padding:0 12px;height:29px;display:flex;align-items:center;border-radius:999px;background:#F4ECDD}
-.footer-links a.on{color:var(--green-700);background:#E9F3E3}
-.footer-links a.cta{background:var(--green-900);color:#fff;font-weight:600;padding:0 14px}
+.copy{position:absolute;left:-1px;top:245px;font-size:13px;letter-spacing:-.02em}
+.footer-links{position:absolute;right:-18px;top:228px;height:40px;display:flex;align-items:center;gap:6px;background:#FFF8EC;border-radius:999px;padding:0 6px;box-shadow:0 3px 10px rgb(0 0 0 / .22)}
+.footer-links a{color:#2A2A24;font-size:12.5px;font-weight:500;padding:0 11px;height:29px;display:flex;align-items:center;border-radius:999px}
+.footer-links a.chip{background:#E4EFDD;color:#1F5B33}
+.footer-links a.peach{background:#FCE3D2;color:#3A2A20}
+.footer-links a.cta{background:#0B4D2E;color:#fff;font-weight:600;padding:0 14px}
 
 @media (max-width:1024px){
-  .footer{height:auto;padding:40px 0 24px;background-position:center top}
+  .footer{height:auto;padding:84px 0 24px;background-position:center top}
+  .footer-band{height:auto;padding:24px 0 34px}
+  .info-bar{position:static;height:auto;flex-wrap:wrap;padding:14px 18px;gap:10px 14px}
+  .info-bar p{flex-basis:calc(100% - 44px)}
   .footer .container{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .footer .brand,.fcol,.copy,.footer-links{position:static}
-  .footer-links{grid-column:1/-1;flex-wrap:wrap;border-radius:20px;justify-self:start}
+  .footer-links{grid-column:1/-1;flex-wrap:wrap;height:auto;padding:6px;border-radius:20px;justify-self:start}
   .copy{grid-column:1/-1}
 }
 @media (max-width:640px){

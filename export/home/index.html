@@ -121,7 +121,7 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
 .badge .dot{width:15px;height:15px;border-radius:50%;background:#2DAA4F;box-shadow:inset 0 0 0 4px #C8F0D2}
 .badge.hot{color:#D12A0E}
 .badge.hot .ic{color:#FF5419;fill:#FF7A1A;font-size:17px;stroke-width:5}
-.crown{position:absolute;left:313px;top:-24px;width:62px;transform:rotate(12deg);z-index:2;filter:drop-shadow(0 3px 4px rgb(0 0 0 / .2))}
+.crown{position:absolute;right:9px;top:-24px;width:62px;transform:rotate(12deg);z-index:2;filter:drop-shadow(0 3px 4px rgb(0 0 0 / .2))}
 .card-body{padding:16px 6px 0;display:flex;flex-direction:column;flex:1}
 .card h3{font-size:21.5px;font-weight:700;color:var(--ink);line-height:1.2}
 .card .desc{color:#4F5761;font-size:14px;line-height:20px;margin-top:8px;height:40px}
@@ -169,23 +169,33 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
 .custom .bush-br{position:absolute;right:-48px;bottom:-30px;width:92px;z-index:2}
 
 /* ================= FOOTER ================= */
-.footer{position:relative;margin-top:20px;height:236px;color:#FFF4E4;background:#9A5426 url(backgrounds/footer-wood.webp) no-repeat;background-size:max(1280px,100%) auto;background-position:center -70px}
+.footer-band{position:relative;height:144px;background:url(backgrounds/footer-top-band.webp) center bottom/max(1280px,100%) auto no-repeat}
+.footer-band .container{height:100%}
+.info-bar{position:absolute;left:-25px;right:-30px;top:60px;height:65px;display:flex;align-items:center;gap:14px;padding:0 26px 0 24px;border-radius:22px;background:#014833;color:#F2F7EF;box-shadow:0 6px 18px rgb(1 50 30 / .25)}
+.info-bar .ib{flex:none;width:30px;height:30px;border-radius:50%;background:#2E9A44;display:grid;place-items:center;font-size:18px;color:#fff}
+.info-bar .ib .ic{stroke-width:6.5}
+.info-bar p{flex:1;font-size:14px;letter-spacing:-.03em}
+.info-bar a{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;white-space:nowrap}
+.info-bar a:hover{text-decoration:underline}
+
+.footer{position:relative;margin-top:0;height:310px;color:#FFF3E2;background:#9A5426 url(backgrounds/footer-wood.webp) no-repeat;background-size:max(1280px,100%) auto;background-position:center top}
 .footer .container{height:100%}
-.footer .brand{position:absolute;left:12px;top:22px}
-.footer .brand img{width:180px}
-.footer .brand p{margin-top:10px;width:290px;font-size:14px;line-height:21px;letter-spacing:-.025em}
-.fcol{position:absolute;top:44px}
-.fcol.c2{left:328px}.fcol.c3{left:582px}.fcol.c4{left:873px}
-.footer h4{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#FFEBD0;margin-bottom:10px}
-.footer ul{list-style:none;display:grid;gap:4px;font-size:13.5px;line-height:21px;letter-spacing:-.025em}
+.footer .brand{position:absolute;left:-1px;top:80px}
+.footer .brand img{width:205px;height:auto}
+.footer .brand p{margin-top:8px;width:320px;font-size:15px;line-height:25px;letter-spacing:-.025em}
+.fcol{position:absolute;top:93px}
+.fcol.c2{left:350px}.fcol.c3{left:628px;width:300px}.fcol.c4{left:935px;width:290px}
+.footer h4{font-size:14px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;color:#FFE9C9;margin-bottom:12px}
+.footer ul{list-style:none;display:grid;gap:6px;font-size:13.5px;line-height:24px;letter-spacing:-.03em}
 .footer li{display:flex;gap:12px;align-items:flex-start}
-.footer li .ic{font-size:17px;margin-top:2px;stroke-width:6}
+.footer li .ic{font-size:17px;margin-top:3px;stroke-width:6.5;color:#FFF3E2}
 .footer a:hover{text-decoration:underline}
-.copy{position:absolute;left:12px;top:174px;font-size:13px}
-.footer-links{position:absolute;right:-18px;top:166px;display:flex;gap:4px;background:#FFF8EC;border-radius:999px;padding:4px 5px;box-shadow:0 3px 10px rgb(0 0 0 / .25)}
-.footer-links a{color:#1C2B22;font-size:11.5px;font-weight:500;padding:0 12px;height:29px;display:flex;align-items:center;border-radius:999px;background:#F4ECDD}
-.footer-links a.on{color:var(--green-700);background:#E9F3E3}
-.footer-links a.cta{background:var(--green-900);color:#fff;font-weight:600;padding:0 14px}
+.copy{position:absolute;left:-1px;top:245px;font-size:13px;letter-spacing:-.02em}
+.footer-links{position:absolute;right:-18px;top:228px;height:40px;display:flex;align-items:center;gap:6px;background:#FFF8EC;border-radius:999px;padding:0 6px;box-shadow:0 3px 10px rgb(0 0 0 / .22)}
+.footer-links a{color:#2A2A24;font-size:12.5px;font-weight:500;padding:0 11px;height:29px;display:flex;align-items:center;border-radius:999px}
+.footer-links a.chip{background:#E4EFDD;color:#1F5B33}
+.footer-links a.peach{background:#FCE3D2;color:#3A2A20}
+.footer-links a.cta{background:#0B4D2E;color:#fff;font-weight:600;padding:0 14px}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:1240px){
@@ -212,10 +222,13 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
   .notice{height:auto}
   .cabin-foot{margin-top:18px}
   .combos::before{display:none}
-  .footer{height:auto;padding:40px 0 24px;background-position:center top}
+  .footer{height:auto;padding:84px 0 24px;background-position:center top}
+  .footer-band{height:auto;padding:24px 0 34px}
+  .info-bar{position:static;height:auto;flex-wrap:wrap;padding:14px 18px;gap:10px 14px}
+  .info-bar p{flex-basis:calc(100% - 44px)}
   .footer .container{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .footer .brand,.fcol,.copy,.footer-links{position:static}
-  .footer-links{grid-column:1/-1;flex-wrap:wrap;border-radius:20px;justify-self:start}
+  .footer-links{grid-column:1/-1;flex-wrap:wrap;height:auto;padding:6px;border-radius:20px;justify-self:start}
   .copy{grid-column:1/-1}
 }
 @media (max-width:640px){
@@ -520,35 +533,45 @@ button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
   </section>
 </main>
 
+<div class="footer-band">
+  <div class="container">
+    <div class="info-bar">
+      <span class="ib"><svg class="ic"><use href="#i-leaf"/></svg></span>
+      <p>Tất cả các gói đều bao gồm nhận phòng tự động bằng chìa khóa kỹ thuật số, đặc sản hữu cơ địa phương và chính sách hủy linh hoạt trong 48 giờ.</p>
+      <a href="#lien-he">Cần lịch trình riêng? <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</div>
 <footer class="footer" id="lien-he">
   <div class="container">
     <div class="brand">
-      <img src="brand/logo-forest_from-mockup@2x.png" alt="FOREST" width="216" height="64">
-      <p>Căn nhà gỗ giữa thiên nhiên, mang đến trải nghiệm nghỉ dưỡng thân thiện và trọn vẹn.</p>
+      <img src="brand/logo-forest-footer.png" alt="FOREST" width="211" height="59">
+      <p>Căn nhà gỗ giữa thiên nhiên, mang đến trải nghiệm nghỉ dưỡng thân thiện và thư giãn</p>
     </div>
     <div class="fcol c2">
       <h4>Liên hệ trực tiếp</h4>
       <ul>
-        <li><svg class="ic"><use href="#i-email"/></svg><a href="mailto:contact@forestcabins.com">contact@forestcabins.com</a></li>
-        <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+84123456472">(+84) 123 456 472</a></li>
+        <li><svg class="ic"><use href="#i-email"/></svg><a href="mailto:concierge@forestcabins.com">concierge@forestcabins.com</a></li>
+        <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+18002948172">+1(800) 294 8172</a></li>
       </ul>
     </div>
     <div class="fcol c3">
       <h4>Giờ hoạt động</h4>
       <ul>
-        <li><svg class="ic"><use href="#i-clock"/></svg><span>Hỗ trợ khách hàng hằng ngày từ 07:00<br>– 22:00 (giờ VN)<br>Tư vấn trực tuyến phản hồi trong 15 phút</span></li>
+        <li><svg class="ic"><use href="#i-clock"/></svg><span>Hỗ trợ khách hàng: Hằng ngày từ 07:00 – 22:00 giờ PST</span></li>
+        <li><svg class="ic"><use href="#i-user"/></svg><span>Tư vấn nhận phòng trực tiếp: Từ 15:00 trở đi</span></li>
       </ul>
     </div>
     <div class="fcol c4">
-      <h4>Kiến thức</h4>
+      <h4>Kiến trúc</h4>
       <ul>
-        <li><svg class="ic"><use href="#i-plus"/></svg><a href="#">Hướng dẫn di chuyển đến khu nghỉ</a></li>
-        <li><svg class="ic"><use href="#i-plus"/></svg><a href="#">Câu hỏi thường gặp</a></li>
+        <li><svg class="ic"><use href="#i-cabins"/></svg><span>Cấu trúc gỗ hài hòa cùng thiên nhiên</span></li>
+        <li><svg class="ic"><use href="#i-info"/></svg><span>Kỹ thuật nội thất Scandinavia.</span></li>
       </ul>
     </div>
-    <span class="copy">© 2026 FOREST Cabins. Mọi quyền được bảo lưu.</span>
+    <span class="copy">© 2026 FOREST Cabins Architectural Holdings. Mọi quyền được bảo lưu.</span>
     <nav class="footer-links" aria-label="Liên kết chân trang">
-      <a href="#">Trang Chủ</a><a class="on" href="#combo">Combo</a><a href="#nha-go">Nhà gỗ</a><a href="#">Hỗ trợ</a><a href="#">Chính sách riêng tư</a><a href="#">Điều khoản dịch vụ</a><a class="cta" href="#dat-phong">Đặt ngay</a>
+      <a href="#">Trang chủ</a><a class="chip" href="#combo">Combo</a><a class="chip" href="#nha-go">Nhà gỗ</a><a class="chip" href="#">Chỉ dẫn đường</a><a class="chip" href="#">Câu hỏi thường gặp</a><a class="peach" href="#lien-he">Liên hệ</a><a class="cta" href="#dat-phong">Đặt ngay</a>
     </nav>
   </div>
 </footer>
