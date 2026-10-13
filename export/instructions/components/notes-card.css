@@ -1,0 +1,9 @@
+/* NotesCard — "Lưu ý quan trọng": tiêu đề trên nền cam nhạt + 5 dòng lưu ý có icon */
+.in-notes{padding:18px 20px 20px}
+.in-notes .head{display:flex;align-items:center;gap:16px;height:58px;padding:0 18px;border-radius:14px;background:#FDEEDF;font-size:19px;font-weight:800;text-transform:uppercase;color:var(--brown-label);letter-spacing:-.01em}
+.in-notes .head .ic{font-size:40px;color:#FF9500}
+.in-notes ul{list-style:none;margin-top:8px}
+.in-notes li{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:center;padding:12px 6px 12px 20px;font-size:16px;line-height:26px;color:#3E4652}
+.in-notes li+li{border-top:1px solid #EFE8DB}
+.in-notes li .ic-bubble{width:46px;height:46px;font-size:26px;background:#FDF0E6;color:#C2410C}
+.in-notes li .ic-bubble .ic{stroke-width:5}

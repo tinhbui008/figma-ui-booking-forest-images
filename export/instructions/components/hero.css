@@ -1,0 +1,15 @@
+/* InstructionsHero — nền đường rừng + mascot (ảnh không chữ), bảng gỗ (ảnh không chữ) + tiêu đề 3D & mô tả là text thật; chữ trên biển chỉ đường cũng là text thật */
+.in-hero{position:relative;height:470px;background:#7CC6EE url(../assets/backgrounds/hero-instructions@2x.webp) center bottom/max(1280px,100%) auto no-repeat}
+.in-hero .in-wrap{height:100%}
+.in-board{position:absolute;left:-6px;top:110px;width:580px;rotate:-3deg;transform-origin:center;aspect-ratio:1672/941;container-type:inline-size;background:url(../assets/decor/sign-board@2x.png) center/100% 100% no-repeat;filter:drop-shadow(0 6px 8px rgb(60 40 10 / .18))}
+.in-board h1{position:absolute;left:0;right:0;top:15.5%;display:flex;justify-content:center;gap:2cqw;font-size:10.6cqw}
+.in-board .title-3d::after{-webkit-text-stroke-width:.24em}
+.in-board p{position:absolute;left:17.5%;top:42%;width:71%;font-size:2.85cqw;line-height:1.72;color:#2A3442;letter-spacing:-.015em}
+/* chữ trên biển gỗ "FOREST →" — bám theo ảnh nền khi màn hình rộng hơn 1280px */
+.in-arrow{--bw:max(1280px,100vw);position:absolute;left:calc(50% + var(--bw) * .3672);top:calc(470px - var(--bw) * .1453);translate:-50% -50%;rotate:-9deg;display:flex;align-items:center;gap:.22em;font-family:var(--font-display);font-weight:800;font-size:calc(var(--bw) * .0285);line-height:1;color:#5A2B0B;letter-spacing:.01em;text-shadow:0 1px 0 rgb(255 230 190 / .55);pointer-events:none;white-space:nowrap}
+.in-arrow .ic{width:.8em;height:.8em;stroke:currentColor;stroke-width:10}
+@media (max-width:1024px){
+  .in-hero{height:auto;padding:104px 0 40px;background-size:1400px auto;background-position:4% bottom}
+  .in-board{position:relative;left:auto;top:auto;width:min(580px,100%)}
+  .in-arrow{display:none}
+}

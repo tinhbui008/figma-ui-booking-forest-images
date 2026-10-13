@@ -1,0 +1,19 @@
+/* AddressCard — địa chỉ khu nghỉ + 3 ô thông số + bản đồ tuyến đường */
+.in-addr{display:grid;grid-template-columns:1fr 568px;gap:18px;padding:18px 16px 18px 26px}
+.in-addr .info{padding-top:16px}
+.in-addr .sec-label{font-size:17.5px;gap:10px}
+.in-addr .sec-label .ic{font-size:22px;color:var(--green-700)}
+.in-addr h2{margin-top:14px;font-size:38px;line-height:1.1;font-weight:700;color:var(--ink);letter-spacing:-.03em}
+.in-addr .where{display:flex;align-items:center;gap:14px;margin-top:20px;font-size:19.5px;font-weight:600;color:var(--green-700)}
+.in-addr .where .ic{font-size:26px;color:#E5262B}
+.in-addr .desc{margin-top:22px;max-width:530px;font-size:16px;line-height:29px;color:#5A6068}
+.in-stats{display:grid;grid-template-columns:1.18fr 1fr 1fr;gap:6px;margin-top:22px;list-style:none}
+.in-stats li{display:flex;align-items:flex-start;gap:8px;min-height:148px;padding:20px 10px 14px 10px;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgb(90 64 30 / .07)}
+.in-stats li:nth-child(3) .ic-bubble{color:#0F6C3A}
+.in-stats small{display:block;font-size:14.5px;color:#666C75}
+.in-stats b{display:block;margin-top:8px;white-space:nowrap;letter-spacing:-.035em;font-size:20px;font-weight:700;line-height:1.2;color:#1C2633}
+.in-stats li:nth-child(3) b{font-size:15.5px;margin-top:10px}
+.in-stats div>span{display:block;margin-top:6px;font-size:13.5px;line-height:1.55;color:#666C75}
+.in-addr .map{aspect-ratio:568/412;background-image:url(../assets/maps/route-map@2x.webp)}
+@media (max-width:1100px){.in-addr{grid-template-columns:1fr;gap:20px;padding:18px}.in-addr .map{max-width:568px;width:100%}}
+@media (max-width:640px){.in-stats{grid-template-columns:1fr}.in-stats li{min-height:0}.in-addr h2{font-size:30px}.in-addr .where{font-size:17px}.map .tag{font-size:13px}.map .eta{padding:8px 12px;gap:10px}.map .eta b{font-size:15px}}

@@ -1,0 +1,51 @@
+/* Base: tokens, reset, nút, chữ tiêu đề 3D, thẻ — dùng chung cho mọi component trang Chỉ dẫn đường */
+:root{
+  --green-900:#034F34; --green-800:#0A5A35; --green-700:#0B6B3A; --green-600:#13843F; --green-500:#2E9B4F; --green-100:#E3F2E6; --green-50:#EEF7EC;
+  --orange-500:#FC7F00; --orange-600:#E8590C; --brown-label:#B4410E; --peach:#FDEBDD;
+  --cream:#FEF9F1; --card:#FFFDF8; --ink:#14223A; --text:#3E4652; --muted:#6A717C; --line:#EDE6D8;
+  --shadow:0 8px 28px rgb(90 64 30 / .07), 0 1px 4px rgb(90 64 30 / .05);
+  --font-sans:'Be Vietnam Pro',system-ui,sans-serif; --font-display:'Baloo 2','Be Vietnam Pro',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--cream);line-height:1.45;letter-spacing:-.018em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;cursor:pointer;background:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ic{width:1em;height:1em;stroke-width:5.5;fill:none;flex:none}
+.in-wrap{width:min(1224px,100% - 32px);margin-inline:auto;position:relative}
+
+/* Nút */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-weight:700;border-radius:999px;transition:transform .15s,filter .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-green{color:#fff;background:linear-gradient(180deg,#22A048 0%,#0E7A3A 60%,#0A6A33 100%);box-shadow:inset 0 2px 1px rgb(255 255 255 / .35),inset 0 -2px 0 rgb(0 0 0 / .15),0 3px 6px rgb(10 90 50 / .3)}
+
+/* Chữ tiêu đề 3D (text thật): viền kem ngoài (::after) → viền đậm + bóng khối (::before) → mặt chữ gradient (span) */
+.title-3d{position:relative;display:inline-block;isolation:isolate;white-space:nowrap;font-family:var(--font-display);font-weight:800;line-height:1;text-transform:uppercase}
+.title-3d::before,.title-3d::after{content:attr(data-text);position:absolute;left:0;top:0;pointer-events:none}
+.title-3d::after{z-index:-2;color:#FFF6DF;-webkit-text-stroke:.28em #FFF6DF;transform:translateY(.065em)}
+.title-3d::before{z-index:-1;color:var(--ol);-webkit-text-stroke:.21em var(--ol);text-shadow:0 .035em 0 var(--ol),0 .065em 0 var(--ol)}
+.title-3d>span{position:relative;color:transparent;background:var(--fill);-webkit-background-clip:text;background-clip:text}
+.title-3d.orange{--ol:#2A1103;--fill:linear-gradient(180deg,#FFF27A 0%,#FFD12A 38%,#FFA30F 70%,#F07800 100%)}
+.title-3d.green{--ol:#05230F;--fill:linear-gradient(180deg,#C9FF6A 0%,#7FEA3C 35%,#36C43A 70%,#14915A 100%)}
+
+/* Thẻ + nhãn mục */
+.card{position:relative;background:var(--card);border-radius:22px;box-shadow:var(--shadow);}
+.sec-label{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:800;line-height:1.2;text-transform:uppercase;color:var(--brown-label);letter-spacing:-.01em}
+.sec-label .ic{font-size:26px;color:var(--green-700)}
+.ic-bubble{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;background:var(--green-100);color:var(--green-700);font-size:26px}
+
+/* Bản đồ minh hoạ (ảnh nền không chữ + tuyến đường SVG + nhãn HTML, giữ đúng tỉ lệ ảnh) */
+.map{position:relative;overflow:hidden;border-radius:18px;background:#CFEBC4 center/cover no-repeat}
+.map svg.route{position:absolute;inset:0;width:100%;height:100%}
+.map .tag{position:absolute;translate:0 -50%;padding:5px 11px;border-radius:9px;background:rgb(255 255 255 / .9);box-shadow:0 2px 8px rgb(0 0 0 / .08);font-size:17px;font-weight:700;color:#1C2633;white-space:nowrap}
+.map .eta{position:absolute;display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:12px;background:#fff;box-shadow:0 6px 18px rgb(30 60 40 / .14)}
+.map .eta .ic{font-size:30px;color:var(--green-700)}
+.map .eta b{display:block;font-size:17.5px;font-weight:700;color:#1C2633}
+.map .eta small{display:block;font-size:14px;color:#4D5550}
+.map .zoom{position:absolute;right:16px;bottom:16px;display:grid;border-radius:10px;background:#fff;box-shadow:0 3px 10px rgb(0 0 0 / .12);overflow:hidden}
+.map .zoom button{width:44px;height:44px;display:grid;place-items:center;font-size:22px;color:#1C2633}
+.map .zoom button+button{border-top:1px solid #EEE}
+.map .zoom button:hover{background:#F3F6F2}
+.map .zoom .ic{stroke-width:6}

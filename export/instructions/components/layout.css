@@ -1,0 +1,5 @@
+/* Layout trang Chỉ dẫn đường: các khối xếp dọc, lưới 2 cột cho Hướng dẫn / Lưu ý */
+main{overflow-x:clip}
+.in-main{display:grid;gap:22px;padding:2px 0 0}
+.in-row2{display:grid;grid-template-columns:742px 1fr;gap:20px}
+@media (max-width:1100px){.in-row2{grid-template-columns:1fr}}
