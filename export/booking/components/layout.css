@@ -1,0 +1,7 @@
+/* Layout trang Đặt phòng: cột form (740px) + cột tóm tắt (460px, dính khi cuộn); cảnh rừng + thỏ ở đáy */
+.bk-main{position:relative;padding:32px 0 26px}
+.bk-grid{position:relative;z-index:1;display:grid;grid-template-columns:740px 1fr;gap:17px;align-items:start}
+.bk-col{display:grid;gap:26px;min-width:0}
+.bk-side{display:grid;gap:18px;position:sticky;top:16px;min-width:0}
+main{overflow-x:clip}
+@media (max-width:1180px){.bk-grid{grid-template-columns:minmax(0,1fr)}.bk-side{position:static}}

@@ -2,7 +2,7 @@
    Nền: ../backgrounds/footer-landscape@2x.webp (2560×1084, hiển thị 1280×542). */
 /* --ff-shift: mép đất của ảnh nằm ở 210/1280 chiều rộng ảnh; khi ảnh rộng hơn 1280px, đẩy nội dung xuống tương ứng */
 .ff{--ff-shift:max(0px,calc(16.406vw - 210px));position:relative;margin-top:24px;height:calc(446px + var(--ff-shift));color:#FFF3E2;background:#9A5426 url(../assets/backgrounds/footer-landscape@2x.webp) center top/max(1280px,100%) auto no-repeat}
-.ff .container{height:100%;top:var(--ff-shift)}
+.ff .container{position:relative;width:min(1184px,100% - 32px);margin-inline:auto;height:100%;top:var(--ff-shift)}
 .ff-brand{position:absolute;left:0;top:226px}
 .ff-brand img{width:170px;height:auto;filter:drop-shadow(0 2px 3px rgb(0 0 0 / .35))}
 .ff-brand p{margin-top:10px;width:290px;font-size:15px;line-height:24px;letter-spacing:-.02em}

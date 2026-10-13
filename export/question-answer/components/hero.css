@@ -1,0 +1,15 @@
+/* FaqHero — nền nhà gỗ + mascot (ảnh không chữ), tấm ván gỗ (ảnh không chữ) + tiêu đề 3D, khung mô tả kem là CSS + text thật */
+.qa-hero{position:relative;height:590px;background:#7CC6EE url(../assets/backgrounds/hero-faq@2x.webp) center bottom/max(1280px,100%) auto no-repeat}
+.qa-hero::after{content:"";position:absolute;inset:auto 0 -1px;height:24px;pointer-events:none}
+.qa-hero .qa-wrap{height:100%}
+/* Tấm ván gỗ (ảnh không chữ, 2106×504) + tiêu đề 3D; khung mô tả kem bên dưới là CSS — đều là text thật */
+.qa-sign{position:absolute;left:-8px;top:226px;width:624px;container-type:inline-size}
+.qa-sign .plank{position:relative;z-index:2;aspect-ratio:2106/504;background:url(../assets/decor/title-plank@2x.webp) center/100% 100% no-repeat;filter:drop-shadow(0 5px 6px rgb(60 40 10 / .22))}
+.qa-sign h1{position:absolute;left:0;right:0;top:20%;bottom:6%;display:flex;align-items:center;justify-content:center;font-size:10.6cqw;letter-spacing:-.045em;transform:scaleX(.86)}
+.qa-sign h1 .title-3d+.title-3d{margin-left:.14em}
+.qa-sign p{position:relative;z-index:1;width:84%;margin:-3.4cqw 0 0 4.6%;padding:5.6cqw 3% 3.4% 5%;background:linear-gradient(180deg,rgb(255 250 240 / .97),rgb(253 248 236 / .93));font-size:3.08cqw;line-height:1.62;font-weight:500;color:#1C2836;letter-spacing:-.025em}
+@media (max-width:1024px){
+  .qa-hero{height:auto;padding:110px 0 64px;background-size:1500px auto;background-position:30% bottom}
+  .qa-hero .qa-wrap{height:auto}
+  .qa-sign{position:relative;left:auto;top:auto;width:min(630px,100%)}
+}}

@@ -1,0 +1,15 @@
+/* BookingSteps — thanh 5 bước (đã xong / đang làm / chưa tới); đường nối nét đứt co giãn đều giữa các bước */
+.bk-steps{position:relative;z-index:4;margin-top:-56px;display:flex;align-items:center;height:106px;padding:0 38px;border-radius:26px;background:rgb(255 252 244 / .97);box-shadow:0 10px 30px rgb(90 64 30 / .1);border:1px solid #F4ECDD;list-style:none}
+.bk-steps li{display:flex;align-items:center;gap:14px;flex:none;height:62px;padding:0 6px;border-radius:999px;color:#8C8F92}
+.bk-steps li.sep{flex:1 1 0;min-width:16px;height:0;padding:0;margin:0 14px;border-top:2px dashed #D9D4CB;border-radius:0}
+.bk-steps .dot{position:relative;display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:#B9B7B1;color:#fff;font-size:19px;font-weight:600}
+.bk-steps .dot .ic{display:none;font-size:22px;stroke-width:8}
+.bk-steps small{display:block;font-size:14.5px;line-height:1.3}
+.bk-steps b{display:block;font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.02em;white-space:nowrap}
+.bk-steps li.done .dot{background:#0D4D2E}.bk-steps li.done .dot span{display:none}.bk-steps li.done .dot .ic{display:block}
+.bk-steps li.done{color:#0D3D27}
+.bk-steps li.cur{margin:0 -14px;padding:0 26px 0 6px;background:#fff;box-shadow:0 4px 14px rgb(30 80 50 / .14);color:#0D7A3A}
+.bk-steps li.cur .dot{width:52px;height:52px;background:linear-gradient(180deg,#1AA34E,#0B7A38);font-size:21px}
+.bk-steps li.cur b{color:#0D3D27}
+@media (max-width:1100px){.bk-steps{height:auto;padding:14px 24px}.bk-steps li{height:56px}.bk-steps li:not(.cur):not(.sep) div{display:none}.bk-steps li.sep{margin:0 8px}}
+@media (max-width:640px){.bk-steps{padding:12px 16px}.bk-steps li.cur{margin:0;padding:0 4px}.bk-steps li.cur div{display:none}.bk-steps li.sep{min-width:8px;margin:0 4px}.bk-steps .dot{width:40px;height:40px;font-size:16px}.bk-steps li.cur .dot{width:46px;height:46px}}

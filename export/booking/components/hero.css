@@ -1,0 +1,14 @@
+/* BookingHero — nền cabin kính giữa rừng (ảnh không chữ) + bảng gỗ treo (ảnh không chữ); nhãn, tiêu đề, mô tả là text thật */
+.bk-hero{position:relative;height:max(470px,calc(100vw * 685 / 2294));background:#7CC6EE url(../assets/backgrounds/hero-booking@2x.webp) center bottom/auto 100% no-repeat}
+.bk-hero::after{content:"";position:absolute;inset:auto 0 0;height:90px;pointer-events:none}
+.bk-hero .bk-wrap{height:100%}
+/* Bảng gỗ treo dây (ảnh không chữ, 1417×965 — phần ván bắt đầu ở ~22% chiều cao) */
+.bk-board{position:absolute;left:28px;top:22px;z-index:2;width:560px;aspect-ratio:1417/965;container-type:inline-size;background:url(../assets/decor/sign-board@2x.webp) center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgb(50 30 10 / .25))}
+.bk-board .eyebrow{position:absolute;left:9.5%;top:31%;display:flex;align-items:center;gap:1.6cqw;font-size:2.8cqw;font-weight:800;text-transform:uppercase;color:#F6B25B;letter-spacing:-.01em;text-shadow:0 1px 0 #5A2A0C,0 0 3px rgb(70 30 5 / .7)}
+.bk-board .eyebrow .ic{font-size:6cqw;color:#F6B25B;stroke-width:6;filter:drop-shadow(0 1px 0 #5A2A0C)}
+.bk-board h1{position:absolute;left:9.5%;top:41%;width:84%;font-family:var(--font-display);font-size:8.2cqw;font-weight:800;line-height:1.06;color:#FFF3E2;letter-spacing:-.01em;text-shadow:0 .03em 0 #6A3410,0 .06em 0 #5A2A0C,0 .08em .12em rgb(40 15 0 / .5)}
+.bk-board p{position:absolute;left:9.5%;top:72%;width:82%;font-size:2.95cqw;line-height:1.5;font-weight:500;color:#FBEBD6;letter-spacing:-.02em;text-shadow:0 1px 1px rgb(60 25 5 / .55)}
+@media (max-width:1024px){
+  .bk-hero{height:auto;padding:70px 0 90px;background-size:auto 100%;background-position:68% bottom}
+  .bk-board{position:relative;left:auto;top:auto;width:min(600px,100%)}
+}

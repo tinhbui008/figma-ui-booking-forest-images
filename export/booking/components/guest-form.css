@@ -1,0 +1,16 @@
+/* GuestForm — 01. Thông tin khách chính + 02. Yêu cầu đặc biệt (input có icon, chọn số khách, textarea) */
+.bk-form-card{padding:24px 30px 26px}
+.bk-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;margin-top:16px}
+.bk-field{display:grid;gap:7px}
+.bk-field.full{grid-column:1/-1}
+.bk-field label{font-size:15px;font-weight:600;color:#1F2A36;letter-spacing:-.02em}
+.bk-input{position:relative}
+.bk-input input,.bk-input select,.bk-input textarea{width:100%;height:48px;padding:0 50px 0 18px;border-radius:10px;border:1.5px solid #F2E7DA;background:#FBF4EC;font-size:16px;color:#2A333E;outline:none;transition:border-color .15s,background .15s;appearance:none}
+.bk-input textarea{height:100px;padding:12px 20px;resize:vertical;line-height:25px;font-size:15.5px}
+.bk-input input:focus,.bk-input select:focus,.bk-input textarea:focus{border-color:#4DB070;background:#fff}
+.bk-input>.ic{position:absolute;right:18px;top:50%;translate:0 -50%;font-size:22px;color:#808790;pointer-events:none;stroke-width:4.5}
+.bk-input.sel select{padding-left:60px;cursor:pointer}
+.bk-input.sel .lead{position:absolute;left:18px;top:50%;translate:0 -50%;font-size:24px;color:#C2551C;pointer-events:none;stroke-width:5}
+.bk-input.sel>.ic:last-child{stroke-width:7;font-size:18px}
+.bk-help{justify-self:end;margin-top:6px;font-size:13.5px;color:#8A8E94}
+@media (max-width:640px){.bk-form-card{padding:22px 18px}.bk-fields{grid-template-columns:1fr}.bk-sec-head{gap:14px}.bk-sec-head h2{font-size:21px}.bk-sec-head .bub{width:46px;height:46px;font-size:24px}.bk-chip{display:none}}

@@ -1,0 +1,20 @@
+/* SiteHeader (biến thể 3 khối) — trang Đặt phòng: logo / menu / nút Đặt ngay + avatar trong 3 pill tách rời */
+.bk-header{position:absolute;inset:0 0 auto;z-index:20;padding-top:9px}
+.bk-header .row{width:min(1076px,100% - 32px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.bk-header .pill{display:flex;align-items:center;border-radius:40px;background:rgb(255 252 246 / .97);box-shadow:0 6px 18px rgb(20 70 110 / .14)}
+.bk-header .logo{height:68px;padding:0 26px}
+.bk-header .logo img{width:150px;height:auto}
+@media (max-width:1024px){.bk-header nav.pill{display:none}}
+.bk-header nav{height:62px;gap:56px;padding:0 70px;font-size:15.5px;font-weight:500;color:#2F3D35}
+.bk-header nav a:hover,.bk-header nav a[aria-current]{color:var(--green-700)}
+.bk-header .act{height:68px;gap:16px;padding:0 14px 0 18px}
+.bk-header .btn-green{width:126px;height:44px;font-size:15.5px}
+.bk-header .avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green-900);color:#fff;font-size:22px}
+.bk-header .menu{display:none}
+@media (max-width:1024px){
+  .bk-header nav,.bk-header .btn-green{display:none}
+  .bk-header .logo{height:58px;padding:0 18px}.bk-header .logo img{width:120px}
+  .bk-header .act{height:58px;padding:0 8px}
+  .bk-header .menu{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--green-100);color:var(--green-700)}
+  .bk-header .menu span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+}

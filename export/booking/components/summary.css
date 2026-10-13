@@ -1,0 +1,36 @@
+/* BookingSummary — ván gỗ tiêu đề (ảnh không chữ) + ảnh nhà gỗ, ngày nhận/trả, thông tin lưu trú, bảng giá, tổng tiền, nút đặt */
+.bk-sum{position:relative;padding-top:56px}
+.bk-sum .plank{position:absolute;left:-12px;right:-6px;top:0;z-index:2;aspect-ratio:482/134;container-type:inline-size;background:url(../assets/decor/plank-summary@2x.webp) center/100% 100% no-repeat}
+.bk-sum .plank h2{position:absolute;left:0;right:0;top:36%;text-align:center;font-family:var(--font-display);font-size:6.1cqw;font-weight:800;color:#FFF3E2;letter-spacing:-.01em;text-shadow:0 2px 0 #6A3410,0 3px 4px rgb(40 15 0 / .45)}
+.bk-sum .body{padding:44px 20px 20px}
+.bk-room{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:423/220;background:#3B4A3A url(../assets/photos/cabin-room@2x.webp) center/cover no-repeat}
+.bk-room::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgb(15 30 20 / .55))}
+.bk-room .tag{position:absolute;z-index:1;left:14px;bottom:50px;height:26px;display:flex;align-items:center;padding:0 12px;border-radius:999px;background:rgb(255 255 255 / .22);backdrop-filter:blur(4px);font-size:12.5px;font-weight:600;color:#fff;text-transform:uppercase}
+.bk-room h3{position:absolute;z-index:1;left:14px;bottom:12px;font-size:26px;font-weight:700;color:#fff;letter-spacing:-.02em}
+.bk-room .alloc{position:absolute;z-index:1;right:14px;bottom:12px;text-align:right;font-size:14.5px;line-height:26px;color:#F2F2EE}
+.bk-dates{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:20px}
+.bk-dates div{display:grid;grid-template-columns:26px 1fr;gap:0 8px;padding:12px 10px;border-radius:12px;background:#F8F2EA}
+.bk-dates .ic{grid-row:span 3;font-size:26px;color:#F07A12;stroke-width:5;margin-top:2px}
+.bk-dates small{font-size:12px;font-weight:600;text-transform:uppercase;color:#8A8F95}
+.bk-dates b{font-size:14.5px;white-space:nowrap;letter-spacing:-.03em;font-weight:700;color:#173A2A}
+.bk-dates span{font-size:13.5px;color:#6A7078}
+.bk-facts{display:flex;justify-content:space-between;gap:8px;margin-top:18px;padding-bottom:16px;border-bottom:1px solid #EDE6DA;font-size:14px;color:#3E4652}
+.bk-facts span{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.bk-facts .ic{font-size:20px;color:#C2551C;stroke-width:5}
+.bk-facts span:last-child{font-weight:700;color:#163A2A}.bk-facts span:last-child .ic{color:#163A2A}
+.bk-price{display:grid;gap:9px;margin-top:16px;font-size:15px;color:#4A515B}
+.bk-price div{display:flex;align-items:baseline;gap:10px}
+.bk-price dd{margin-left:auto;font-weight:600;color:#1C2633}
+.bk-price dt.main{font-size:16px;font-weight:600;color:#1C2633}
+.bk-price .calc{font-size:14px;color:#8A8F95;margin-left:18px}
+.bk-price dd.inc{color:#C8701C;font-weight:500}
+.bk-total{display:grid;grid-template-columns:auto 1fr auto;gap:0 14px;align-items:center;margin:20px -18px 0;padding:18px 22px 16px 20px;border-radius:16px;background:#FCF2E2}
+.bk-total .ic{grid-row:span 2;font-size:26px;color:#1E7A3C}
+.bk-total small{font-size:12.5px;white-space:nowrap;font-weight:700;text-transform:uppercase;color:#1C3A2B}
+.bk-total em{grid-column:2;font-style:normal;font-size:11px;white-space:nowrap;color:#6A7078}
+.bk-total b{grid-row:1;grid-column:3;text-align:right;white-space:nowrap;font-size:23px;font-weight:800;color:#163A2A;letter-spacing:-.02em}
+.bk-total span{grid-column:3;text-align:right;font-size:13px;color:#7B8087}
+.bk-book{width:100%;height:62px;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:16px;border-radius:12px;background:linear-gradient(180deg,#1A9A49,#0B7536);color:#fff;font-size:20px;font-weight:600;box-shadow:0 6px 16px rgb(11 117 54 / .3)}
+.bk-book .ic{font-size:26px;stroke-width:5}
+.bk-book:hover{filter:brightness(1.06)}
+@media (max-width:640px){.bk-sum .body{padding:40px 14px 18px}.bk-dates{grid-template-columns:1fr}.bk-facts{flex-wrap:wrap}.bk-total{margin-inline:-8px;padding-inline:14px}.bk-total small,.bk-total em{white-space:normal}.bk-total b{font-size:18px}.bk-facts span{white-space:normal}.bk-room .alloc{display:none}}
