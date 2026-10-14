@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="components/payment.css">
 <link rel="stylesheet" href="components/summary.css">
 <link rel="stylesheet" href="components/support.css">
-<link rel="stylesheet" href="components/demo-bar.css">
 <link rel="stylesheet" href="components/footer.css">
 <style>.cmp-meta{font:13px/1.5 system-ui,sans-serif;letter-spacing:0;color:#555;background:#fff;border-bottom:1px solid #e5e0d5;padding:10px 16px;position:relative;z-index:30}.cmp-meta b{color:#111;font-size:14px}</style>
 </head><body>
@@ -208,7 +207,6 @@
     </div>
   </form>
 </div>
-<div class="bk-wrap"><div class="bk-demo" role="group" aria-label="Mô phỏng trạng thái"><p><svg class="ic"><use href="#i-hash"/></svg><b>Trình mô phỏng trạng thái Demo:</b> <span class="cur">Đang ở Bước 02 (Thông tin khách)</span></p><div class="opts"><button type="button" data-step="1" aria-pressed="false">Bước 01 Ngày</button><button type="button" data-step="2" aria-pressed="true">Bước 02 Thông tin khách</button><button type="button" data-step="3" aria-pressed="false">Bước 03 Xem lại</button><button type="button" data-step="4" aria-pressed="false">Bước 04 Thanh toán</button><button type="button" data-step="5" aria-pressed="false">Bước 05 Đã xác nhận</button></div></div></div>
 </main>
 <footer class="ff" id="lien-he">
   <div class="container">
@@ -240,12 +238,5 @@
     <span class="ff-copy">© 2026 FOREST Cabins Architectural Holdings. Mọi quyền được bảo lưu.</span>
   </div>
 </footer></div>
-<script>
-// Demo: đổi bước hiện tại trên thanh BookingSteps (khi lên Next.js, bước lấy theo route / state đặt phòng)
-(function(){const names=['Ngày & Đơn','Thông tin khách','Xem lại & Tóm tắt','Thanh toán','Đã xác nhận'];
-const steps=[...document.querySelectorAll('.bk-steps li:not(.sep)')],btns=[...document.querySelectorAll('.bk-demo [data-step]')],lbl=document.querySelector('.bk-demo .cur');
-btns.forEach(b=>b.addEventListener('click',()=>{const c=+b.dataset.step;
- steps.forEach((li,i)=>{li.className=i+1<c?'done':i+1===c?'cur':'';i+1===c?li.setAttribute('aria-current','step'):li.removeAttribute('aria-current')});
- btns.forEach(x=>x.setAttribute('aria-pressed',x===b));if(lbl)lbl.textContent='Đang ở Bước 0'+c+' ('+names[c-1]+')'}));})();
-</script>
+
 </body></html>
